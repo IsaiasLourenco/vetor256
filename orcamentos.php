@@ -1,0 +1,48 @@
+<?php
+// Importar as classes 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+// Carregar o autoloader do composer
+require 'vendor/autoload.php';
+// Instância da classe
+$mail = new PHPMailer(true);
+try {
+  // Configurações do servidor
+  $mail->isSMTP();        //Devine o uso de SMTP no envio
+  $mail->SMTPAuth = true; //Habilita a autenticação SMTP
+  $mail->Username   = 'adm@vetor256.com';
+  $mail->Password   = 'Magnata4525$';
+  // Criptografia do envio SSL também é aceito
+  $mail->SMTPSecure = 'tls';
+  // Informações específicadas pelo Google
+  $mail->Host = 'smtp.vetor256.com';
+  $mail->Port = 587;
+  // Define o remetente
+  $mail->setFrom('adm@vetor256.com', 'Nome do Remetente');
+  // Define o destinatário
+  $mail->addAddress('adm@vetor256.com', 'Destinatário');
+
+  $nome_msg = $_POST['nome_msg'];
+  $email_msg = $_POST['email_msg'];
+  $plano_msg = $_POST['plano_msg'];
+  $mensagem_msg = $_POST['mensagem_msg'];
+
+  $destinatario = $email;
+  $assunto = 'Novo Orçamento';
+  $mensagem = utf8_decode('Nome: ' . $nome_msg . "/r/n" . "/r/n" . 'E-mail: ' . $email_msg . "/r/n" . "/r/n" . 'Plano: ' . $plano_msg . "/r/n" . "/r/n" . 'Mensagem: ' . $mensagem_msg);
+  $cabecalho = "From: " . $email;
+
+  mail($destinatario, $assunto, $mensagem, $cabecalho);
+
+  // Conteúdo da mensagem
+  $mail->isHTML(true);  // Seta o formato do e-mail para aceitar conteúdo HTML
+  $mail->Subject = 'Novo Orçamento';
+  $mail->Body    = $mensagem;
+  $mail->AltBody = $mensagem;
+  $cabecalho = "From: " . $email;
+  // Enviar
+  $mail->send();
+  echo 'E-mail enviado com sucesso!';
+} catch (Exception $e) {
+  echo " A Mensagem não pôde ser enviada. Mailer Error: {$mail->ErrorInfo}";
+}
