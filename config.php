@@ -20,10 +20,10 @@ $youtube_pessoal = "https://www.youtube.com/channel/UCIOJJZ2iVCtQ7xrioK9XUTA";
 $youtube_empresarial = "https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw";
 
 //VARIÁVEIS PARA O BANCO DE DADOS
-$servidor = 'localhost';
-$usuario = 'root';
-$senha = '';
-$banco = 'portfolio';
+//$servidor = 'localhost';
+//$usuario = 'root';
+//$senha = '';
+//$banco = 'portfolio';
 
 //VARIÁVEIS GLOBAIS PARA A CONFIGURAÇÃO DO SISTEMA
 //$nivel_estoque = 10;
