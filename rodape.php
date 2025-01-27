@@ -17,12 +17,35 @@
             compartilhar e ensinar smpre que necessário. Engajamento é tudo
             no mundo comercial de hoje. Escreva-nos.
           </p>
-          <form action="">
+          <!--<form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain">
             <div class="input-group">
-              <input type="text" class="form-control border-white p-3" placeholder="Seu Email" />
-              <button class="btn btn-dark">Enviar</button>
+              <input type="text" class="form-control border-white p-3" placeholder="Seu Email" required/>
+              <input type="text" class="form-control border-white p-3" placeholder="Mensagem" required/>  
+              <button type="submit" value="enviar" class="btn btn-dark">Enviar</button>
+              <button type="reset" value="limpar" class="btn btn-dark">Limpar</button>
             </div>
-          </form>
+          </form>-->
+          <form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain" action="orcamentos.php">
+              <div class="row g-3">
+                <div class="col-xl-12">
+                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar">
+                    Peça seu orçamento
+                  </button>
+                  <button class="btn btn-primary w-100 py-3" type="reset" value="limpar" class="form-control btn btn-secondary">
+                    Limpar os campos
+                  </button>
+                </div>
+              </div>
+            </form>
         </div>
       </div>
       <div class="col-lg-8 col-md-6">

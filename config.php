@@ -1,14 +1,14 @@
 <?php
 
 //variáves do projeto
-$url = 'https://vetor256.com/'; //caminho do projeto, url do domínio, sempre barra no final
+$url = 'https://isaiaslourenco.github.io/vetor256/'; //caminho do projeto, url do domínio, sempre barra no final
 $nome_site = 'Vetor256.';
 $telefone = '+55 (19) 99674 5466';
 $telefone_whatsapp = '+5519996745466';
 $endereco = 'Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP - Brasil';
-$email = 'adm@vetor256.com';
+$email = 'isaiaslourenco2020@gmail.com';
 $CNPJ = '45.057.703/0001-94';
-$desenvolvedor_site = 'https://vetor256.com/';
+$desenvolvedor_site = 'https://isaiaslourenco.github.io/vetor256/';
 $desenvolvedor_nome = 'Vetor256.';
 
 //VARIÁVEIS PARA REDES SOCIAIS - Se você deixar a variável vazia, o ícone não será mostrado on-line.

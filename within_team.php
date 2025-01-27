@@ -65,10 +65,6 @@
                   <i class="bi bi-caret-right-fill"></i>Front End Developer
                 </h5>
 
-                <h5 class="mb-3">
-                  <i class="bi bi-caret-right-fill"></i>Cartoon Master
-                </h5>
-
               </div>
             </div>
           </div>

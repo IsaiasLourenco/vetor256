@@ -27,7 +27,7 @@
            </div>
            <div class="ps-4">
              <h5 class="mb-2">Nos envie um Email com seu orçamento'</h5>
-             <h4 class="text-primary mb-0">adm@vetor256.com</h4>
+             <h4 class="text-primary mb-0">isaiaslourenco2020@gmail.com</h4>
            </div>
          </div>
        </div>
@@ -47,27 +47,51 @@
      </div>
      <div class="row g-5">
        <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-         <form>
+
+       <form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain" action="orcamentos.php">
+              <div class="row g-3">
+                <div class="col-xl-12">
+                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar">
+                    Peça seu orçamento
+                  </button>
+                  <button class="btn btn-primary w-100 py-3" type="reset" value="limpar" class="form-control btn btn-secondary">
+                    Limpar os campos
+                  </button>
+                </div>
+              </div>
+            </form>
+
+       <!--<form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain">
            <div class="row g-3">
              <div class="col-md-6">
-               <input type="text" class="form-control border-0 bg-light px-4" placeholder="Seu Nome" style="height: 55px" />
+               <input type="text" class="form-control border-0 bg-light px-4" placeholder="Seu Nome" style="height: 55px" required/>
              </div>
              <div class="col-md-6">
-               <input type="email" class="form-control border-0 bg-light px-4" placeholder="Seu Email" style="height: 55px" />
+               <input type="email" class="form-control border-0 bg-light px-4" placeholder="Seu Email" style="height: 55px" required/>
              </div>
              <div class="col-12">
-               <input type="text" class="form-control border-0 bg-light px-4" placeholder="Assunto" style="height: 55px" />
+               <input type="text" class="form-control border-0 bg-light px-4" placeholder="Assunto" style="height: 55px" required />
              </div>
              <div class="col-12">
                <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Mensagem"></textarea>
              </div>
              <div class="col-12">
-               <button class="btn btn-primary w-100 py-3" type="submit">
+             <button type="reset" value="limpar" class="form-control btn btn-secondary">Limpar</button>
+               <button type="submit" value="enviar" class="btn btn-primary w-100 py-3">
                  Envie
                </button>
              </div>
            </div>
-         </form>
+         </form>-->
        </div>
        <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
          <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.1260380677486!2d-46.93984668541321!3d-22.386605525143146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8562bee338825%3A0x9456bc1c93a0ebfe!2sR.%20Mococa%2C%20880%20-%20Lot.%20Parque%20Itacolomi%2C%20Mogi%20Gua%C3%A7u%20-%20SP%2C%2013843-184!5e0!3m2!1spt-BR!2sbr!4v1636519484864!5m2!1spt-BR!2sbr" frameborder="0" style="min-height: 350px; border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

@@ -58,7 +58,7 @@
           </h4>
           <div class=" bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
 
-            <form method="post" action="orcamentos.php">
+            <form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain" action="orcamentos.php">
               <div class="row g-3">
                 <div class="col-xl-12">
                   <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
@@ -78,8 +78,11 @@
                   <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-dark w-100 py-3" type="submit">
+                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar">
                     Peça seu orçamento
+                  </button>
+                  <button class="btn btn-primary w-100 py-3" type="reset" value="limpar" class="form-control btn btn-secondary">
+                    Limpar os campos
                   </button>
                 </div>
               </div>
