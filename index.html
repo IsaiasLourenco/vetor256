@@ -52,10 +52,9 @@
     <div class="row gx-0">
       <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
         <div class="d-inline-flex align-items-center" style="height: 45px;">
-          <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Rua Mococa, 880 Jd. Itacolomy - Mogi
-            Guaçu - SP</small>
+          <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP</small>
           <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+55 (19) 99674 5466</small>
-          <small class="text-light"><i class="fa fa-envelope-open me-2"></i>isaiaslourenco2020@gmail.com</small>
+          <small class="text-light"><i class="fa fa-envelope-open me-2"></i>adm.vetor256@gmail.com</small>
         </div>
       </div>
       <div class="col-lg-4 text-center text-lg-end">
@@ -631,16 +630,14 @@
             Mande-nos um email
           </h4>
           <div class=" bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-
-            <form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain" action="#">
+            
+            <form action="mailto:adm.vetor256@gmail.com, isaiaslourenco2020@gmail.com?subject=Novo Orçamento" method="post" enctype="text/plain">
               <div class="row g-3">
                 <div class="col-xl-12">
-                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
-                    style="height: 55px" required />
+                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
                 </div>
                 <div class="col-12">
-                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
-                    style="height: 55px" required />
+                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
                 </div>
                 <div class="col-12">
                   <select name="plano_msg" class="form-select bg-light border-0" required style="height: 55px">
@@ -651,11 +648,10 @@
                   </select>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem"
-                    required></textarea>
+                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar">
+                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar" onclick="recarregarAPagina()">
                     Peça seu orçamento
                   </button>
                   <button class="btn btn-primary w-100 py-3" type="reset" value="limpar"
@@ -781,27 +777,24 @@
                 compartilhar e ensinar smpre que necessário. Engajamento é tudo
                 no mundo comercial de hoje. Escreva-nos.
               </p>
-                <form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain"
+                <form action="mailto:adm.vetor256@gmail.com, isaiaslourenco2020@gmail.com?subject=Novo Orçamento" method="post" enctype="text/plain"
                   action="#">
                   <div class="row g-3">
                     <div class="col-xl-12">
-                      <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
-                        style="height: 55px" required />
+                      <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
                     </div>
                     <div class="col-12">
-                      <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
-                        style="height: 55px" required />
+                      <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
                     </div>
                     <div class="col-12">
-                      <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem"
-                        required></textarea>
+                      <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-dark w-100 py-3" type="submit" value="enviar">
+                      <button class="btn btn-dark w-100 py-3" type="submit" value="enviar" onclick="recarregarAPagina()">
                         Peça seu orçamento
                       </button>
                       <button class="btn btn-primary w-100 py-3" type="reset" value="limpar"
-                        class="form-control btn btn-secondary">
+                        class="form-control btn btn-secondary" >
                         Limpar os campos
                       </button>
                     </div>
@@ -821,7 +814,7 @@
                 </div>
                 <div class="d-flex mb-2">
                   <i class="bi bi-envelope-open text-primary me-2"></i>
-                  <p class="mb-0">isaiaslourenco2020@gmail.com</p>
+                  <p class="mb-0">adm.vetor256@gmail.com</p>
                 </div>
                 <div class="d-flex mb-2">
                   <i class="bi bi-telephone text-primary me-2"></i>
@@ -924,6 +917,12 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+    <script>
+      function recarregarAPagina(){
+          window.location.reload();
+      } 
+      </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
