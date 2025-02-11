@@ -138,6 +138,7 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 abbr[title],
 abbr[data-bs-original-title] {
@@ -326,6 +327,7 @@ button,
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
+  appearance: inherit;
 }
 button:not(:disabled),
 [type='button']:not(:disabled),
@@ -377,6 +379,7 @@ legend + * {
 [type='search'] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
+  appearance: inherit;
 }
 ::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -2041,7 +2044,7 @@ textarea.form-control-lg {
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
   appearance: none;
-  color-adjust: exact;
+  /* color-adjust: exact; */
 }
 .form-check-input[type='checkbox'] {
   border-radius: 0.25em;

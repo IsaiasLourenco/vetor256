@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Vetor256.</title>
   <meta name="description"
     content="Empresa voltada para a otimização do seu negócio utilizando o que existe de melhor hoje em dia ao se falar em Tecnologia." />
@@ -15,7 +15,17 @@
     name="description" />
 
   <!-- Favicon -->
-  <link href="img/oficiallogo.ico" rel="icon" />
+  <link href="/img/adm/oficiallogo.ico  " rel="ico">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS (necessário para eventos do modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+
+  <!-- Script para estilizar a busca por palavras   -->
+  <link rel="stylesheet" href="./css/busca.css">
 
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,6 +47,13 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="ico" href="./img/oficiallogo.ico" type="image/x-icon">
+
+  <script src="./js/email.js" defer></script>
+  <!-- Script para busca por palavras   -->
+
 </head>
 
 <body>
@@ -52,7 +69,8 @@
     <div class="row gx-0">
       <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
         <div class="d-inline-flex align-items-center" style="height: 45px;">
-          <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP</small>
+          <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Rua Mococa, 880 Jd. Itacolomy - Mogi
+            Guaçu - SP - Brasil</small>
           <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+55 (19) 99674 5466</small>
           <small class="text-light"><i class="fa fa-envelope-open me-2"></i>adm.vetor256@gmail.com</small>
         </div>
@@ -123,7 +141,7 @@
                 Soluções Digitais Criativas & Inovadoras
               </h1>
               <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamento</a>
-              <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contato</a>  
+              <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contato</a>
             </div>
           </div>
         </div>
@@ -155,7 +173,7 @@
   </div>
   <!-- Navbar & Carousel End -->
 
-  <!-- Full Screen Search Start -->
+  <!-- Procura por palavras -->
   <div class="modal fade" id="searchModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content" style="background: rgba(9, 30, 62, 0.7)">
@@ -164,9 +182,9 @@
         </div>
         <div class="modal-body d-flex align-items-center justify-content-center">
           <div class="input-group" style="max-width: 600px">
-            <input type="text" class="form-control bg-transparent border-primary p-3"
+            <input type="text" id="searchInput" class="form-control bg-transparent border-primary p-3"
               placeholder="Digite a palavra que quer achar" />
-            <button class="btn btn-primary px-4">
+            <button class="btn btn-primary px-4" id="searchButton">
               <i class="bi bi-search"></i>
             </button>
           </div>
@@ -174,7 +192,7 @@
       </div>
     </div>
   </div>
-  <!-- Full Screen Search End -->
+  <!-- Fim da Procura por palavras -->
 
   <!-- Facts Start -->
   <div class="container-fluid facts py-5 pt-lg-0">
@@ -211,7 +229,7 @@
               <i class="bi bi-award-fill text-primary"></i>
             </div>
             <div class="ps-4">
-              <h5 class="text-white mb-0">Reconhecimentos e Realizações</h5>
+              <h5 class="text-white mb-0">Reconhecimentos</h5>
               <h1 class="text-white mb-0" data-toggle="counter-up">16</h1>
             </div>
           </div>
@@ -236,14 +254,15 @@
             Focado no aprendizado na área de tecnologia desde meados dos anos 90,
             nosso CEO já passou por empresas gigantes do mercado tecnológico como
             a IBM, onde se especializou em Quality Assurance Engineering, e
-            programação COBOL em ambiente Mainframe, e mais atualmente na
-            BairesDev, onde atuou no mesmo ramo em empresas dos EUA. São mais
-            de 28 anos de experiência no mercado da T.I.
+            programação COBOL em ambiente Mainframe, também atuou com Programador PL-SQL na New Soft Inteligence, em um
+            software de Processos de Comércio Exterior que trabalha em integração com o S.A.P., também atuou como
+            Quality Assurance na BairesDev, onde atuou em empresas dos EUA. São mais de 28 anos de experiência no
+            mercado da T.I.
           </p>
           <div class="row g-0 mb-3">
             <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
               <h5 class="mb-3">
-                <i class="fa fa-check text-secondary me-3"></i>Realizações/Reconhecimentos
+                <i class="fa fa-check text-secondary me-3"></i>Reconhecimentos
               </h5>
               <h5 class="mb-3">
                 <i class="fa fa-check text-secondary  me-3"></i>Profissionais capacitados
@@ -261,13 +280,15 @@
           <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
             <div class="bg-primary d-flex align-items-center justify-content-center rounded"
               style="width: 60px; height: 60px">
-              <a class="bi bi-telephone-inbound-fill text-white" href=""></a>
+              <a class="bi bi-telephone-inbound-fill text-white" href="tel:+5519996745466"
+                title="Ligue-nos do seu aparelho ou use um app do seu PC!"></a>
             </div>
             <div class="ps-4">
               <h5 class="mb-2">Dúvidas? Ligue <i class="bi bi-arrow-down"></i></h5>
               <h4 class="text-primary mb-0">(19) 99674 5466</h4>
             </div>
           </div>
+
           <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Faça seu
             orçamento</a>
         </div>
@@ -312,7 +333,7 @@
                 style="width: 60px; height: 60px">
                 <i class="bi bi-award-fill text-white"></i>
               </div>
-              <h4>Realizações e Reconhecimentos</h4>
+              <h4>Reconhecimentos</h4>
               <p class="mb-0">
                 Certificações de Qualidade e clientes satisfeitos com nossos
                 projetos sempre são nosso foco e objetivo
@@ -374,8 +395,8 @@
             </div>
             <h4 class="mb-3">Segurança Cibernética</h4>
             <p class="m-0">
-              Nunca deixamos nossos clientes com medo dos hackers ou qualquer
-              invasão, nossa qualidade está alinhado com a proteção digital
+              Nunca deixamos nossos clientes com medo dos hackers ou qualquer invasão, nossa qualidade está alinhada com
+              a proteção digital
             </p>
             <a class="btn btn-lg btn-primary rounded" href="products.html">
               <i class="bi bi-arrow-right"></i>
@@ -390,8 +411,8 @@
             </div>
             <h4 class="mb-3">Análise de Dados</h4>
             <p class="m-0">
-              Levantamento de Requisitos e Engenharia Reversa são pontos
-              importantes para um projeto excelente desde a base
+              Levantamento de Requisitos e Engenharia Reversa são pontos importantes para um projeto excelente desde a
+              base
             </p>
             <a class="btn btn-lg btn-primary rounded" href="products.html">
               <i class="bi bi-arrow-right"></i>
@@ -406,8 +427,8 @@
             </div>
             <h4 class="mb-3">Desenvolvimento Web</h4>
             <p class="m-0">
-              Sempre autalizados, trabalhando com as últimas versões de linguagens
-              atuais como PHP e JavaScript
+              Sempre autalizados, trabalhando com as últimas versões de linguagens atuais como PHP, JavaScript, Reat,
+              Node.JS, Jest ou Testes Automatizados, Redux, TypeScript, Express, PostGreSQL, Docker
             </p>
             <a class="btn btn-lg btn-primary rounded" href="products.html">
               <i class="bi bi-arrow-right"></i>
@@ -421,10 +442,8 @@
               <i class="bi bi-menu-app-fill text-white"></i>
             </div>
             <h4 class="mb-3">Desenvolvimentos de Apps</h4>
-            <p class="m-0">
-              Hoje em dia nossa rede empresarial ou doméstica tem novos dispositivos
-              para trocar informações em tempo real com os PC's, e linguagens como
-              Ionic e React são o alicerce para esse exchange
+            <p class="m-0">Hoje em dia nossa rede empresarial ou doméstica tem novos dispositivos móveis para trocar
+              informações em tempo real com os PC's, e linguagens como Ionic e React são o alicerce para esse exchange
             </p>
             <a class="btn btn-lg btn-primary rounded" href="products.html">
               <i class="bi bi-arrow-right"></i>
@@ -438,8 +457,7 @@
               <i class="bi bi-binoculars-fill text-white"></i>
             </div>
             <h4 class="mb-3">Otimização SEO</h4>
-            <p class="m-0">
-              Otimização para motores de busca ou para mecanismos de busca é o conjunto de estratégias para
+            <p class="m-0">Otimização para motores e mecanismos de busca → é o conjunto de estratégias para
               potencializar e melhorar o posicionamento de um site nas páginas de resultados
             </p>
             <a class="btn btn-lg btn-primary rounded" href="products.html">
@@ -483,7 +501,7 @@
             <div class="p-5 pt-0">
               <h1 class="display-5 mb-3">
                 <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Mês</small>
+                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Saiba mais</small>
               </h1>
               <div class="d-flex justify-content-between mb-3">
                 <span>HTML5 & CSS3</span><i class="fa fa-check text-secondary pt-1"></i>
@@ -513,7 +531,7 @@
             <div class="p-5 pt-0">
               <h1 class="display-5 mb-3">
                 <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Mês</small>
+                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Saiba mais</small>
               </h1>
               <div class="d-flex justify-content-between mb-3">
                 <span>HTML5 & CSS3</span><i class="fa fa-check text-secondary pt-1"></i>
@@ -543,7 +561,7 @@
             <div class="p-5 pt-0">
               <h1 class="display-5 mb-3">
                 <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Mês</small>
+                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Saiba mais</small>
               </h1>
               <div class="d-flex justify-content-between mb-3">
                 <span>HTML5 & CSS3</span><i class="fa fa-check text-secondary pt-1"></i>
@@ -609,7 +627,8 @@
           <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
             <div class="bg-primary d-flex align-items-center justify-content-center rounded"
               style="width: 60px; height: 60px">
-              <a class="bi bi-telephone-inbound-fill text-white" href="phone.html"></a>
+              <a class="bi bi-telephone-inbound-fill text-white" href="tel:+5519996745466"
+                title="Ligue-nos do seu aparelho ou use um app do seu PC!"></a>
             </div>
             <h4 class="text-primary mb-0">&nbsp;&nbsp;(19)99674-5466</h4>
           </div>
@@ -618,9 +637,16 @@
 
             <div class="bg-primary d-flex align-items-center justify-content-center rounded"
               style="width: 60px; height: 60px">
-              <a class="bi bi-whatsapp text-white" href="#"></a>
+              <a id="whatsappBtn" class="bi bi-whatsapp text-white"
+                href="https://wa.me/5519996745466?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20seus%20produtos!"
+                target="_blank"
+                style="display: inline-block; text-decoration: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;"
+                title="Nos mande uma mensagem pelo WhatsApp!">
+              </a>
             </div>
+
             <h4 class="text-primary mb-0">&nbsp;&nbsp;(19)99674-5466</h4>
+
           </div>
 
         </div>
@@ -630,38 +656,34 @@
             Mande-nos um email
           </h4>
           <div class=" bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-            
-            <form action="mailto:adm.vetor256@gmail.com, isaiaslourenco2020@gmail.com?subject=Novo Orçamento" method="post" enctype="text/plain">
+            <!-- Formulário corrigido -->
+            <form action="mailto:adm.vetor256@gmail.com" method="post" id="emailForm" accept-charset="UTF-8">
               <div class="row g-3">
                 <div class="col-xl-12">
-                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
+                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
+                    style="height: 55px" />
                 </div>
                 <div class="col-12">
-                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
+                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
+                    style="height: 55px" />
                 </div>
                 <div class="col-12">
-                  <select name="plano_msg" class="form-select bg-light border-0" required style="height: 55px">
-                    <option selected>Selecione um Plano</option>
+                  <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px">
+                    <option value="" selected>Selecione um Plano</option>
                     <option value="Plano Básico">Plano Básico</option>
                     <option value="Plano Standard">Plano Standard</option>
                     <option value="Plano Advanced">Plano Advanced</option>
                   </select>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
+                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg"
+                    placeholder="Mensagem"></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar" onclick="recarregarAPagina()">
-                    Peça seu orçamento
-                  </button>
-                  <button class="btn btn-primary w-100 py-3" type="reset" value="limpar"
-                    class="form-control btn btn-secondary">
-                    Limpar os campos
-                  </button>
+                  <button id="emailLink" class="btn btn-dark w-100 py-3" type="button">Peça seu orçamento</button>
                 </div>
               </div>
             </form>
-
           </div>
         </div>
       </div>
@@ -679,6 +701,9 @@
         </h1>
       </div>
       <div class="row g-5">
+
+        <!-- Isaias Lourenço -->
+
         <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
           <div class="team-item bg-light rounded overflow-hidden">
             <div class="team-img position-relative overflow-hidden">
@@ -689,14 +714,14 @@
 
               <div>
                 <figure>
-                  <img src="img/adm/eu.png">
+                  <img src="./img/adm/isaias.PNG" alt="Isaias">
                 </figure>
               </div>
 
               <h4 class="text-primary">Isaias Lourenço</h4>
 
               <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>SEO
+                <i class="bi bi-caret-right-fill"></i>CEO
               </h5>
 
               <h5 class="mb-3">
@@ -710,21 +735,23 @@
             </div>
           </div>
         </div>
+
+        <!-- Matheus Moraes -->
         <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
           <div class="team-item bg-light rounded overflow-hidden">
             <div class="text-center py-4">
               <div>
                 <figure>
-                  <img src="img/adm/eu.png">
+                  <img src="./img/adm/matheus.png" alt="Matheus">
                 </figure>
               </div>
-              <h4 class="text-primary ">Isaias Lourenço</h4>
+              <h4 class="text-primary ">Matheus Moraes</h4>
               <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>Gerente Financeiro
+                <i class="bi bi-caret-right-fill"></i>Marketing
               </h5>
 
               <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>Pós Venda
+                <i class="bi bi-caret-right-fill"></i>Gerente Financeiro
               </h5>
 
               <h5 class="mb-3">
@@ -733,22 +760,27 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
           <div class="team-item bg-light rounded overflow-hidden">
             <div class="team-img position-relative overflow-hidden">
               <div class="text-center py-4">
                 <div>
                   <figure>
-                    <img src="img/adm/eu.png">
+                    <img src="./img/adm/sem-foto.jpg" alt="Pode ser você">
                   </figure>
                 </div>
-                <h4 class="text-primary">Isaias Lourenço</h4>
+                <h4 class="text-primary">Venha trabalhar conosco</h4>
                 <h5 class="mb-3">
-                  <i class="bi bi-caret-right-fill"></i>Designer
+                  <i class="bi bi-caret-right-fill"></i>Prospectiva de Carreira
                 </h5>
 
                 <h5 class="mb-3">
-                  <i class="bi bi-caret-right-fill"></i>Front End Developer
+                  <i class="bi bi-caret-right-fill"></i>Shadow Inicial
+                </h5>
+
+                <h5 class="mb-3">
+                  <i class="bi bi-caret-right-fill"></i>Faça parte da equipe
                 </h5>
 
               </div>
@@ -777,29 +809,35 @@
                 compartilhar e ensinar smpre que necessário. Engajamento é tudo
                 no mundo comercial de hoje. Escreva-nos.
               </p>
-                <form action="mailto:adm.vetor256@gmail.com, isaiaslourenco2020@gmail.com?subject=Novo Orçamento" method="post" enctype="text/plain"
-                  action="#">
-                  <div class="row g-3">
-                    <div class="col-xl-12">
-                      <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
-                    </div>
-                    <div class="col-12">
-                      <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
-                    </div>
-                    <div class="col-12">
-                      <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
-                    </div>
-                    <div class="col-12">
-                      <button class="btn btn-dark w-100 py-3" type="submit" value="enviar" onclick="recarregarAPagina()">
-                        Peça seu orçamento
-                      </button>
-                      <button class="btn btn-primary w-100 py-3" type="reset" value="limpar"
-                        class="form-control btn btn-secondary" >
-                        Limpar os campos
-                      </button>
-                    </div>
+              <!-- Formulário rodapé -->
+              <form action="mailto:adm.vetor256@gmail.com" method="post" id="footerEmailForm" accept-charset="UTF-8">
+                <div class="row g-3">
+                  <div class="col-xl-12">
+                    <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
+                      style="height: 55px" />
                   </div>
-                </form>
+                  <div class="col-12">
+                    <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
+                      style="height: 55px" />
+                  </div>
+                  <div class="col-12">
+                    <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px">
+                      <option value="" selected>Selecione um Plano</option>
+                      <option value="Plano Básico">Plano Básico</option>
+                      <option value="Plano Standard">Plano Standard</option>
+                      <option value="Plano Advanced">Plano Advanced</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg"
+                      placeholder="Mensagem"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button id="emailLink" class="btn btn-dark w-100 py-3" type="button">Peça seu orçamento</button>
+                  </div>
+                </div>
+              </form>
+
             </div>
           </div>
           <div class="col-lg-8 col-md-6">
@@ -858,26 +896,24 @@
               </div>
               <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                 <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                  <h3 class="text-light mb-0">Links Externos</h3>
+                  <h3 class="text-light mb-0">Últimas Notícias do mundo da T.I.</h3>
                 </div>
                 <div class="link-animated d-flex flex-column justify-content-start">
-                  <a class="text-light mb-2" target="_blank" href="https://www.google.com/"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Google</a>
                   <a class="text-light mb-2" target="_blank"
-                    href="https://www.microsoft.com/pt-br/microsoft-365/business/compare-all-microsoft-365-business-products-b?&ef_id=CjwKCAiA9NGfBhBvEiwAq5vSy1WJ_IY02sjoieRN4t8PdAw78NGWQlgCqOJ6IepbOcv-TgX04HuwCRoCRxYQAvD_BwE:G:s&OCID=AIDcmm409lj8ne_SEM_CjwKCAiA9NGfBhBvEiwAq5vSy1WJ_IY02sjoieRN4t8PdAw78NGWQlgCqOJ6IepbOcv-TgX04HuwCRoCRxYQAvD_BwE:G:s&lnkd=Google_O365SMB_Brand&gclid=CjwKCAiA9NGfBhBvEiwAq5vSy1WJ_IY02sjoieRN4t8PdAw78NGWQlgCqOJ6IepbOcv-TgX04HuwCRoCRxYQAvD_BwE"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Microsoft</a>
+                    href="https://www.tudocelular.com/seguranca/noticias/n230464/ransomware-baseado-em-ia-faz-vitimas-no-brasil.html"><i
+                      class="bi bi-arrow-right text-primary me-2"></i>Ransoware faz vítimas no Brasil</a>
                   <a class="text-light mb-2" target="_blank"
-                    href="https://wpinformatica.online/multimarcas/?gclid=CjwKCAiA9NGfBhBvEiwAq5vSy8ebxb3LpHr9q1lbdcrQndPey4bxLaBOFMllf4ZcG6S_yx8o2Q32RxoCtL0QAvD_BwE"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Formate
-                    seu PC</a>
+                    href="https://www.tecmundo.com.br/seguranca/401460-imposto-do-cachorrinho-pf-vai-investigar-deepfake-de-haddad.htm"><i
+                      class="bi bi-arrow-right text-primary me-2"></i>Imposto do cachorrinho </a>
                   <a class="text-light mb-2" target="_blank"
-                    href="https://recoverit.wondershare.com.br/computer-troubleshooting/speed-up-pc.html?gclid=CjwKCAiA9NGfBhBvEiwAq5vSyw4S970zbgZh7MP3ILlFFF3uIim88C513YCPhGbJmdyMTPWJRuCfUhoCcJUQAvD_BwE"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Acelere
-                    seu lap/desktop</a>
+                    href="https://www.msn.com/pt-br/noticias/ciencia-e-tecnologia/riscos-cibern%C3%A9ticos-em-2025-o-que-voc%C3%AA-precisa-saber-para-n%C3%A3o-ser-pego-de-surpresa/ar-BB1rbHCX"><i
+                      class="bi bi-arrow-right text-primary me-2"></i>Riscos cibernéticos em 2025</a>
                   <a class="text-light mb-2" target="_blank"
-                    href="https://campanhas.serpro.gov.br/institucional/inovacao-que-pulsa/?gclid=CjwKCAiA9NGfBhBvEiwAq5vSyzCNpJ7oI-QJhs1B4yi8vwba8Gi6ITrIWh_33ULTLutK3vGq-PMzmhoCFiYQAvD_BwE"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Últimas
-                    do mundo da T.I.</a>
+                    href="https://g1.globo.com/mundo/noticia/2025/02/03/trump-diz-que-musk-nao-pode-e-nao-fara-nada-sem-aprovacao-e-casa-branca-afirma-que-bilionario-nao-recebe-salario-dos-eua.ghtml"><i
+                      class="bi bi-arrow-right text-primary me-2"></i>Trump e Elon Musk</a>
+                  <a class="text-light mb-2" target="_blank"
+                    href="https://www.cnnbrasil.com.br/tecnologia/meta-remove-filtros-do-instagram-nesta-terca-14-veja-o-que-muda/"><i
+                      class="bi bi-arrow-right text-primary me-2"></i>Instagram remove 14 filtros</a>
                 </div>
               </div>
             </div>
@@ -917,12 +953,14 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    
+
     <script>
-      function recarregarAPagina(){
-          window.location.reload();
+      function recarregarAPagina() {
+        window.location.reload();
       } 
-      </script>
+    </script>
+
+    <script src="./js/busca.js" defer></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
