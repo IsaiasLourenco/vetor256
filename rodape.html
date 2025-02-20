@@ -1,3 +1,6 @@
+<script src="./js/email.js" defer></script>
+<!-- Script para busca por palavras   -->
+
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
   <div class="container">
@@ -16,27 +19,35 @@
             compartilhar e ensinar smpre que necessário. Engajamento é tudo
             no mundo comercial de hoje. Escreva-nos.
           </p>
-          <form action="mailto:adm.vetor256@gmail.com" method="post" enctype="text/plain" action="#">
-              <div class="row g-3">
-                <div class="col-xl-12">
-                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
-                </div>
-                <div class="col-12">
-                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
-                </div>
-                <div class="col-12">
-                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar">
-                    Peça seu orçamento
-                  </button>
-                  <button class="btn btn-primary w-100 py-3" type="reset" value="limpar" class="form-control btn btn-secondary">
-                    Limpar os campos
-                  </button>
-                </div>
+          <!-- Formulário rodapé -->
+          <form action="mailto:adm.vetor256@gmail.com" method="post" id="footerEmailForm" accept-charset="UTF-8">
+            <div class="row g-3">
+              <div class="col-xl-12">
+                <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
+                  style="height: 55px" />
               </div>
-            </form>
+              <div class="col-12">
+                <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
+                  style="height: 55px" />
+              </div>
+              <div class="col-12">
+                <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px">
+                  <option value="" selected>Selecione um Plano</option>
+                  <option value="Plano Básico">Plano Básico</option>
+                  <option value="Plano Standard">Plano Standard</option>
+                  <option value="Plano Advanced">Plano Advanced</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg"
+                  placeholder="Mensagem"></textarea>
+              </div>
+              <div class="col-12">
+                <button id="emailLink" class="btn btn-dark w-100 py-3" type="button">Peça seu orçamento</button>
+              </div>
+            </div>
+          </form>
+
         </div>
       </div>
       <div class="col-lg-8 col-md-6">
@@ -47,7 +58,7 @@
             </div>
             <div class="d-flex mb-2">
               <i class="bi bi-geo-alt text-primary me-2"></i>
-              <p class="mb-0">Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP</p>
+              <p class="mb-0">Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP - Brasil</p>
             </div>
             <div class="d-flex mb-2">
               <i class="bi bi-envelope-open text-primary me-2"></i>
@@ -58,14 +69,19 @@
               <p class="mb-0">+55 (19) 99674 5466</p>
             </div>
             <div class="d-flex mt-4">
-                <a class="btn btn-primary btn-square me-2" href="https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw" target="_blank" title="Visitar Youtube"><i class="fab fa-youtube fw-normal"></i></a>
+              <a class="btn btn-primary btn-square me-2" href="https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw"
+                target="_blank" title="Visitar Youtube"><i class="fab fa-youtube fw-normal"></i></a>
 
-                <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/joseisaiaslourenco" target="_blank" title="Visitar Facebook"><i class="bi bi-facebook text-uppercase"></i></a>
-              
-                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/in/isaias-louren%C3%A7o-5265b425a/" target="_blank" title="Visitar Linkedin"><i class="fab fa-linkedin fw-normal"></i></a>
-              
-                <a class="btn btn-primary btn-square me-2" href="https://www.instagram.com/isaiaslourenco3/" target="_blank" title="Visitar Instagram"><i class="fab fa-instagram fw-normal"></i></a>
-              
+              <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/joseisaiaslourenco"
+                target="_blank" title="Visitar Facebook"><i class="bi bi-facebook text-uppercase"></i></a>
+
+              <a class="btn btn-primary btn-square me-2"
+                href="https://www.linkedin.com/in/isaias-louren%C3%A7o-5265b425a/" target="_blank"
+                title="Visitar Linkedin"><i class="fab fa-linkedin fw-normal"></i></a>
+
+              <a class="btn btn-primary btn-square me-2" href="https://www.instagram.com/isaiaslourenco3/"
+                target="_blank" title="Visitar Instagram"><i class="fab fa-instagram fw-normal"></i></a>
+
             </div>
           </div>
           <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -75,7 +91,8 @@
             <div class="link-animated d-flex flex-column justify-content-start">
               <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
               <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>Sobre</a>
-              <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Serviços</a>
+              <a class="text-light mb-2" href="service.html"><i
+                  class="bi bi-arrow-right text-primary me-2"></i>Serviços</a>
               <a class="text-light mb-2" href="team.html"><i class="bi bi-arrow-right text-primary me-2"></i>Conheça
                 nosso Time</a>
               <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Últimas
@@ -85,17 +102,24 @@
           </div>
           <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-              <h3 class="text-light mb-0">Links Externos</h3>
+              <h3 class="text-light mb-0">Últimas Notícias do mundo da T.I.</h3>
             </div>
             <div class="link-animated d-flex flex-column justify-content-start">
-              <a class="text-light mb-2" target="_blank" href="https://www.google.com/"><i class="bi bi-arrow-right text-primary me-2"></i>Google</a>
-              <a class="text-light mb-2" target="_blank" href="https://www.microsoft.com/pt-br/microsoft-365/business/compare-all-microsoft-365-business-products-b?&ef_id=CjwKCAiA9NGfBhBvEiwAq5vSy1WJ_IY02sjoieRN4t8PdAw78NGWQlgCqOJ6IepbOcv-TgX04HuwCRoCRxYQAvD_BwE:G:s&OCID=AIDcmm409lj8ne_SEM_CjwKCAiA9NGfBhBvEiwAq5vSy1WJ_IY02sjoieRN4t8PdAw78NGWQlgCqOJ6IepbOcv-TgX04HuwCRoCRxYQAvD_BwE:G:s&lnkd=Google_O365SMB_Brand&gclid=CjwKCAiA9NGfBhBvEiwAq5vSy1WJ_IY02sjoieRN4t8PdAw78NGWQlgCqOJ6IepbOcv-TgX04HuwCRoCRxYQAvD_BwE"><i class="bi bi-arrow-right text-primary me-2"></i>Microsoft</a>
-              <a class="text-light mb-2" target="_blank" href="https://wpinformatica.online/multimarcas/?gclid=CjwKCAiA9NGfBhBvEiwAq5vSy8ebxb3LpHr9q1lbdcrQndPey4bxLaBOFMllf4ZcG6S_yx8o2Q32RxoCtL0QAvD_BwE"><i class="bi bi-arrow-right text-primary me-2"></i>Formate
-                seu PC</a>
-              <a class="text-light mb-2" target="_blank" href="https://recoverit.wondershare.com.br/computer-troubleshooting/speed-up-pc.html?gclid=CjwKCAiA9NGfBhBvEiwAq5vSyw4S970zbgZh7MP3ILlFFF3uIim88C513YCPhGbJmdyMTPWJRuCfUhoCcJUQAvD_BwE"><i class="bi bi-arrow-right text-primary me-2"></i>Acelere
-                seu lap/desktop</a>
-              <a class="text-light mb-2" target="_blank" href="https://campanhas.serpro.gov.br/institucional/inovacao-que-pulsa/?gclid=CjwKCAiA9NGfBhBvEiwAq5vSyzCNpJ7oI-QJhs1B4yi8vwba8Gi6ITrIWh_33ULTLutK3vGq-PMzmhoCFiYQAvD_BwE"><i class="bi bi-arrow-right text-primary me-2"></i>Últimas
-                do mundo da T.I.</a>
+              <a class="text-light mb-2" target="_blank"
+                href="https://www.tudocelular.com/seguranca/noticias/n230464/ransomware-baseado-em-ia-faz-vitimas-no-brasil.html"><i
+                  class="bi bi-arrow-right text-primary me-2"></i>Ransoware faz vítimas no Brasil</a>
+              <a class="text-light mb-2" target="_blank"
+                href="https://www.tecmundo.com.br/seguranca/401460-imposto-do-cachorrinho-pf-vai-investigar-deepfake-de-haddad.htm"><i
+                  class="bi bi-arrow-right text-primary me-2"></i>Imposto do cachorrinho </a>
+              <a class="text-light mb-2" target="_blank"
+                href="https://www.msn.com/pt-br/noticias/ciencia-e-tecnologia/riscos-cibern%C3%A9ticos-em-2025-o-que-voc%C3%AA-precisa-saber-para-n%C3%A3o-ser-pego-de-surpresa/ar-BB1rbHCX"><i
+                  class="bi bi-arrow-right text-primary me-2"></i>Riscos cibernéticos em 2025</a>
+              <a class="text-light mb-2" target="_blank"
+                href="https://g1.globo.com/mundo/noticia/2025/02/03/trump-diz-que-musk-nao-pode-e-nao-fara-nada-sem-aprovacao-e-casa-branca-afirma-que-bilionario-nao-recebe-salario-dos-eua.ghtml"><i
+                  class="bi bi-arrow-right text-primary me-2"></i>Trump e Elon Musk</a>
+              <a class="text-light mb-2" target="_blank"
+                href="https://www.cnnbrasil.com.br/tecnologia/meta-remove-filtros-do-instagram-nesta-terca-14-veja-o-que-muda/"><i
+                  class="bi bi-arrow-right text-primary me-2"></i>Instagram remove 14 filtros</a>
             </div>
           </div>
         </div>

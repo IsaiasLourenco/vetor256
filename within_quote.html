@@ -1,3 +1,5 @@
+  <script src="./js/email.js"></script>  
+  
   <!-- Quote Start -->
   <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
@@ -36,18 +38,28 @@
 
 
           <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px">
-              <a class="bi bi-telephone-inbound-fill text-white" href="phone.php"></a>
+            <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+              style="width: 60px; height: 60px">
+              <a class="bi bi-telephone-inbound-fill text-white" href="tel:+5519996745466"
+                title="Ligue-nos do seu aparelho ou use um app do seu PC!"></a>
             </div>
             <h4 class="text-primary mb-0">&nbsp;&nbsp;(19)99674-5466</h4>
           </div>
 
           <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
 
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px">
-              <a class="bi bi-whatsapp text-white" href="zap.php"></a>
+            <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+              style="width: 60px; height: 60px">
+              <a id="whatsappBtn" class="bi bi-whatsapp text-white"
+                href="https://wa.me/5519996745466?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20seus%20produtos!"
+                target="_blank"
+                style="display: inline-block; text-decoration: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;"
+                title="Nos mande uma mensagem pelo WhatsApp!">
+              </a>
             </div>
+
             <h4 class="text-primary mb-0">&nbsp;&nbsp;(19)99674-5466</h4>
+
           </div>
 
         </div>
@@ -57,37 +69,34 @@
             Mande-nos um email
           </h4>
           <div class=" bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-
-            <form action="mailto:isaiaslourenco2020@gmail.com" method="post" enctype="text/plain" action="orcamentos.php">
+            <!-- Formulário corrigido -->
+            <form action="mailto:adm.vetor256@gmail.com" method="post" id="emailForm" accept-charset="UTF-8">
               <div class="row g-3">
                 <div class="col-xl-12">
-                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome" style="height: 55px" required />
+                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
+                    style="height: 55px" />
                 </div>
                 <div class="col-12">
-                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email" style="height: 55px" required />
+                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
+                    style="height: 55px" />
                 </div>
                 <div class="col-12">
-                  <select name="plano_msg" class="form-select bg-light border-0" required style="height: 55px">
-                    <option selected>Selecione um Plano</option>
+                  <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px">
+                    <option value="" selected>Selecione um Plano</option>
                     <option value="Plano Básico">Plano Básico</option>
                     <option value="Plano Standard">Plano Standard</option>
                     <option value="Plano Advanced">Plano Advanced</option>
                   </select>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem" required></textarea>
+                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg"
+                    placeholder="Mensagem"></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-dark w-100 py-3" type="submit" value="enviar">
-                    Peça seu orçamento
-                  </button>
-                  <button class="btn btn-primary w-100 py-3" type="reset" value="limpar" class="form-control btn btn-secondary">
-                    Limpar os campos
-                  </button>
+                  <button id="emailLink" class="btn btn-dark w-100 py-3" type="button">Peça seu orçamento</button>
                 </div>
               </div>
             </form>
-
           </div>
         </div>
       </div>

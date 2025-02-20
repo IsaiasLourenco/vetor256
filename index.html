@@ -15,13 +15,12 @@
     name="description" />
 
   <!-- Favicon -->
-  <link href="/img/adm/oficiallogo.ico" rel="ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/adm/oficiallogo.ico">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap JS (necessário para eventos do modal) -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
@@ -95,36 +94,14 @@
   </div>
   <!-- Spinner End -->
 
-  <!-- Topbar Start -->
-  <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-    <div class="row gx-0">
-      <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-        <div class="d-inline-flex align-items-center" style="height: 45px;">
-          <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Rua Mococa, 880 Jd. Itacolomy - Mogi
-            Guaçu - SP - Brasil</small>
-          <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+55 (19) 99674 5466</small>
-          <small class="text-light"><i class="fa fa-envelope-open me-2"></i>adm.vetor256@gmail.com</small>
-        </div>
-      </div>
-      <div class="col-lg-4 text-center text-lg-end">
-        <div class="d-inline-flex align-items-center" style="height: 45px;">
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-            href="https://www.facebook.com/joseisaiaslourenco" target="_blank" title="Visitar Facebook"><i
-              class="fab fa-facebook-f fw-normal"></i></a>
-
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-            href="https://www.instagram.com/isaiaslourenco3/" target="_blank" title="Visitar Instagram"><i
-              class="fab fa-instagram fw-normal"></i></a>
-
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-            href="https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw" target="_blank" title="Visitar Youtube"><i
-              class="fab fa-youtube fw-normal"></i></a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Topbar End -->
+  <!-- Chamando topbar -->
+  <div id="topbar"></div>
+  <script>
+    fetch("topbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("topbar").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando topbar -->
 
   <!-- Navbar & Carousel Start -->
   <div class="container-fluid position-relative p-0">
@@ -225,796 +202,120 @@
   </div>
   <!-- Fim da Procura por palavras -->
 
-  <!-- Facts Start -->
-  <div class="container-fluid facts py-5 pt-lg-0">
-    <div class="container py-5 pt-lg-0">
-      <div class="row gx-0">
-        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-          <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px">
-            <div class="bg-light d-flex align-items-center justify-content-center rounded mb-2"
-              style="width: 60px; height: 60px">
-              <i class="bi bi-people-fill text-primary"></i>
-            </div>
-            <div class="ps-4">
-              <h5 class="text-white mb-0">Clientes Satisfeitos</h5>
-              <h1 class="text-white mb-0" data-toggle="counter-up">2</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-          <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
-              style="width: 60px; height: 60px">
-              <i class="bi bi-check-circle-fill text-white"></i>
-            </div>
-            <div class="ps-4">
-              <h5 class="text-dark mb-0">Projetos Prontos</h5>
-              <h1 class="text-dark mb-0" data-toggle="counter-up">6</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-          <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px">
-            <div class="bg-light d-flex align-items-center justify-content-center rounded mb-2"
-              style="width: 60px; height: 60px">
-              <i class="bi bi-award-fill text-primary"></i>
-            </div>
-            <div class="ps-4">
-              <h5 class="text-white mb-0">Reconhecimentos</h5>
-              <h1 class="text-white mb-0" data-toggle="counter-up">16</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Facts Start -->
+  <!-- Chamando facts -->
+  <div id="facts"></div>
+  <script>
+    fetch("facts.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("facts").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando facts -->
 
-  <!-- About Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-7">
-          <div class="section-title position-relative pb-3 mb-5">
-            <h5 class="fw-bold text-primary text-uppercase">Sobre</h5>
-            <h1 class="mb-0">
-              As melhores soluções em T.I. em mais de 16 anos de existência
-            </h1>
-          </div>
-          <p class="mb-4">
-            Focado no aprendizado na área de tecnologia desde meados dos anos 90,
-            nosso CEO já passou por empresas gigantes do mercado tecnológico como
-            a IBM, onde se especializou em Quality Assurance Engineering, e
-            programação COBOL em ambiente Mainframe, também atuou com Programador PL-SQL na New Soft Inteligence, em um
-            software de Processos de Comércio Exterior que trabalha em integração com o S.A.P., também atuou como
-            Quality Assurance na BairesDev, onde atuou em empresas dos EUA. São mais de 28 anos de experiência no
-            mercado da T.I.
-          </p>
-          <div class="row g-0 mb-3">
-            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-              <h5 class="mb-3">
-                <i class="fa fa-check text-secondary me-3"></i>Reconhecimentos
-              </h5>
-              <h5 class="mb-3">
-                <i class="fa fa-check text-secondary  me-3"></i>Profissionais capacitados
-              </h5>
-            </div>
-            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-              <h5 class="mb-3">
-                <i class="fa fa-check text-secondary me-3"></i>Suporte 24/7
-              </h5>
-              <h5 class="mb-3">
-                <i class="fa fa-check text-secondary me-3"></i>Preços competitivos
-              </h5>
-            </div>
-          </div>
-          <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded"
-              style="width: 60px; height: 60px">
-              <a class="bi bi-telephone-inbound-fill text-white" href="tel:+5519996745466"
-                title="Ligue-nos do seu aparelho ou use um app do seu PC!"></a>
-            </div>
-            <div class="ps-4">
-              <h5 class="mb-2">Dúvidas? Ligue <i class="bi bi-arrow-down"></i></h5>
-              <h4 class="text-primary mb-0">(19) 99674 5466</h4>
-            </div>
-          </div>
+  <!-- Chamando withinabout -->
+  <div id="within_about"></div>
+  <script>
+    fetch("within_about.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_about").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando withinabout -->
 
-          <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Faça seu
-            orçamento</a>
-        </div>
-        <div class="col-lg-5" style="min-height: 500px">
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/sobre.jpg"
-              style="object-fit: cover" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- About End -->
+  <!-- Chamando withinFeature -->
+  <div id="within_feature"></div>
+  <script>
+    fetch("within_feature.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_feature").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando withinFeature -->
 
-  <!-- Features Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
-        <h5 class="fw-bold text-primary text-uppercase">
-          Porquê nos escolher
-        </h5>
-        <h1 class="mb-0">
-          Estamos aqui para aumentar a exponencialidade do seu negócio
-        </h1>
-      </div>
-      <div class="row g-5">
-        <div class="col-lg-4">
-          <div class="row g-5">
-            <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                style="width: 60px; height: 60px">
-                <i class="bi bi-briefcase-fill text-white"></i>
-              </div>
-              <h4>Melhores no Ramo</h4>
-              <p class="mb-0">
-                Sem sombra de dúvidas, nosssas especializações, realizações e
-                competência, nos colocam à frente de empresas do ramo
-              </p>
-            </div>
-            <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                style="width: 60px; height: 60px">
-                <i class="bi bi-award-fill text-white"></i>
-              </div>
-              <h4>Reconhecimentos</h4>
-              <p class="mb-0">
-                Certificações de Qualidade e clientes satisfeitos com nossos
-                projetos sempre são nosso foco e objetivo
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px">
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/revista-3.jpg"
-              style="object-fit: cover" />
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="row g-5">
-            <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                style="width: 60px; height: 60px">
-                <i class="bi bi-people-fill text-white"></i>
-              </div>
-              <h4>Profissionais capacitados</h4>
-              <p class="mb-0">
-                Nosso time tem especialização e certificações em áreas base
-                como Banco de dados, Desenvolvimento Ágil e Testes de Software
-              </p>
-            </div>
-            <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                style="width: 60px; height: 60px">
-                <i class="bi bi-headset text-white"></i>
-              </div>
-              <h4>Suporte 24/7</h4>
-              <p class="mb-0">
-                Nunca medimos esforços para atender qualquer chamado ou
-                dificuldade com suporte sempre a postos para resolver
-                problemas
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Features Start -->
+  <!-- Chamando withinService -->
+  <div id="within_service"></div>
+  <script>
+    fetch("within_service.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_service").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando withinService -->
 
-  <!-- Service Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
-        <h5 class="fw-bold text-primary text-uppercase">Nossos Serviços</h5>
-        <h1 class="mb-0">Soluções Customizadas em T.I. para seu sucesso empresarial</h1>
-      </div>
-      <div class="row g-5">
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="bi bi-shield-lock-fill text-white"></i>
-            </div>
-            <h4 class="mb-3">Segurança Cibernética</h4>
-            <p class="m-0">
-              Nunca deixamos nossos clientes com medo dos hackers ou qualquer invasão, nossa qualidade está alinhada com
-              a proteção digital
-            </p>
-            <a class="btn btn-lg btn-primary rounded" href="products.html">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="bi bi-pie-chart-fill text-white"></i>
-            </div>
-            <h4 class="mb-3">Análise de Dados</h4>
-            <p class="m-0">
-              Levantamento de Requisitos e Engenharia Reversa são pontos importantes para um projeto excelente desde a
-              base
-            </p>
-            <a class="btn btn-lg btn-primary rounded" href="products.html">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="bi bi-code-slash text-white"></i>
-            </div>
-            <h4 class="mb-3">Desenvolvimento Web</h4>
-            <p class="m-0">
-              Sempre autalizados, trabalhando com as últimas versões de linguagens atuais como PHP, JavaScript, Reat,
-              Node.JS, Jest ou Testes Automatizados, Redux, TypeScript, Express, PostGreSQL, Docker
-            </p>
-            <a class="btn btn-lg btn-primary rounded" href="products.html">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="bi bi-menu-app-fill text-white"></i>
-            </div>
-            <h4 class="mb-3">Desenvolvimentos de Apps</h4>
-            <p class="m-0">Hoje em dia nossa rede empresarial ou doméstica tem novos dispositivos móveis para trocar
-              informações em tempo real com os PC's, e linguagens como Ionic e React são o alicerce para esse exchange
-            </p>
-            <a class="btn btn-lg btn-primary rounded" href="products.html">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-          <div
-            class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-            <div class="service-icon">
-              <i class="bi bi-binoculars-fill text-white"></i>
-            </div>
-            <h4 class="mb-3">Otimização SEO</h4>
-            <p class="m-0">Otimização para motores e mecanismos de busca → é o conjunto de estratégias para
-              potencializar e melhorar o posicionamento de um site nas páginas de resultados
-            </p>
-            <a class="btn btn-lg btn-primary rounded" href="products.html">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-          <div
-            class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-            <h3 class="text-white mb-3">Faça seu orçamento</h3>
-            <p class="text-white mb-3">
-              Abertos a propostas e novos desafios, buscando a
-              customização do seu software para melhor satisfazê-lo
-            </p>
-            <h3 class="text-white mb-0">(19) 99674 5466</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Service End -->
-
-  <!-- Pricing Plan Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
-        <h5 class="fw-bold text-primary text-uppercase">Planos</h5>
-        <h1 class="mb-0">
-          Nós oferecemos um preço justo e competititvo para nossos clientes
-        </h1>
-      </div>
-      <div class="row g-0">
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-          <div class="bg-light rounded">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <i class="bi bi-1-circle-fill text-white"></i>
-              <h4 class="text-primary mb-1">Plano Básico</h4>
-              <small class="text-uppercase">Para Pequenas Empresas</small>
-            </div>
-            <div class="p-5 pt-0">
-              <h1 class="display-5 mb-3">
-                <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Saiba mais</small>
-              </h1>
-              <div class="d-flex justify-content-between mb-3">
-                <span>HTML5 & CSS3</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Bootstrap v5</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Layout Responsivo</span><i class="fa fa-times text-danger pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Suporte entre navegadores</span><i class="fa fa-times text-danger pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Pagamento para Instalação</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-          <div class="bg-white rounded shadow position-relative" style="z-index: 1">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Plano Standard</h4>
-              <small class="text-uppercase">Para empresas de médio porte</small>
-            </div>
-            <div class="p-5 pt-0">
-              <h1 class="display-5 mb-3">
-                <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Saiba mais</small>
-              </h1>
-              <div class="d-flex justify-content-between mb-3">
-                <span>HTML5 & CSS3</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Bootstrap v5</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class=" d-flex justify-content-between mb-3">
-                <span>Layout Responsivo</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class=" d-flex justify-content-between mb-2">
-                <span>Suporte entre navegadores</span><i class="fa fa-times text-danger pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Pagamento para Instalação</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <a href="quote.html" class=" btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-          <div class="bg-light rounded">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Plano Advanced</h4>
-              <small class="text-uppercase">Para Grandes Empresas</small>
-            </div>
-            <div class="p-5 pt-0">
-              <h1 class="display-5 mb-3">
-                <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Saiba mais</small>
-              </h1>
-              <div class="d-flex justify-content-between mb-3">
-                <span>HTML5 & CSS3</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Bootstrap v5</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Layout Responsivo</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Suporte entre navegadores</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Pagamento para Instalação</span><i class="fa fa-check text-secondary pt-1"></i>
-              </div>
-              <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Pricing Plan End -->
-
-  <!-- Quote Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-7">
-          <div class="section-title position-relative pb-3 mb-5">
-            <h5 class="fw-bold text-primary text-uppercase">
-              Peça um orçamento
-            </h5>
-            <h1 class="mb-0">Quer um orçamento gratuito? Contate a gente!</h1>
-          </div>
-          <div class="row gx-3">
-            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-              <h5 class="mb-4">
-                <i class="bi bi-reply-all-fill text-primary me-3"></i>Respondemos
-                rápido
-              </h5>
-            </div>
-            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-              <h5 class="mb-4">
-                <i class="bi bi-headset text-primary"></i> Suporte por
-                Telefone 24 hrs
-              </h5>
-            </div>
-          </div>
-          <p class="mb-4">
-            Nosso maior objetivo não é obter novos clientes, mas conhecer
-            novos amigos, e por isso estamos sempre atentos a toda
-            oportunidade de oferecer a todos o melhor atendimento, com o
-            objetivo de ver nossos clientes satisfeitos e realizados com suas
-            empresas informatizadas.
-          </p>
-          <h5 class="mb-2">
-            Entre em contato
-          </h5>
-
-
-          <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded"
-              style="width: 60px; height: 60px">
-              <a class="bi bi-telephone-inbound-fill text-white" href="tel:+5519996745466"
-                title="Ligue-nos do seu aparelho ou use um app do seu PC!"></a>
-            </div>
-            <h4 class="text-primary mb-0">&nbsp;&nbsp;(19)99674-5466</h4>
-          </div>
-
-          <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded"
-              style="width: 60px; height: 60px">
-              <a id="whatsappBtn" class="bi bi-whatsapp text-white"
-                href="https://wa.me/5519996745466?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20seus%20produtos!"
-                target="_blank"
-                style="display: inline-block; text-decoration: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;"
-                title="Nos mande uma mensagem pelo WhatsApp!">
-              </a>
-            </div>
-
-            <h4 class="text-primary mb-0">&nbsp;&nbsp;(19)99674-5466</h4>
-
-          </div>
-
-        </div>
-
-        <div class="col-lg-5">
-          <h4 class="fw-bold text-primary">
-            Mande-nos um email
-          </h4>
-          <div class=" bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-            <!-- Formulário corrigido -->
-            <form action="mailto:adm.vetor256@gmail.com" method="post" id="emailForm" accept-charset="UTF-8">
-              <div class="row g-3">
-                <div class="col-xl-12">
-                  <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
-                    style="height: 55px" />
-                </div>
-                <div class="col-12">
-                  <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
-                    style="height: 55px" />
-                </div>
-                <div class="col-12">
-                  <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px">
-                    <option value="" selected>Selecione um Plano</option>
-                    <option value="Plano Básico">Plano Básico</option>
-                    <option value="Plano Standard">Plano Standard</option>
-                    <option value="Plano Advanced">Plano Advanced</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg"
-                    placeholder="Mensagem"></textarea>
-                </div>
-                <div class="col-12">
-                  <button id="emailLink" class="btn btn-dark w-100 py-3" type="button">Peça seu orçamento</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Quote End -->
-
-  <!-- Team Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
-        <h5 class="fw-bold text-primary text-uppercase">Nossa Equipe</h5>
-        <h1 class="mb-0">
-          Um time de Profissionais preparados para otimizar o seu negócio
-        </h1>
-      </div>
-      <div class="row g-5">
-
-        <!-- Isaias Lourenço -->
-
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-          <div class="team-item bg-light rounded overflow-hidden">
-            <div class="team-img position-relative overflow-hidden">
-
-            </div>
-
-            <div class="text-center py-4">
-
-              <div>
-                <figure>
-                  <img src="./img/adm/isaias.PNG" alt="Isaias">
-                </figure>
-              </div>
-
-              <h4 class="text-primary">Isaias Lourenço</h4>
-
-              <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>CEO
-              </h5>
-
-              <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>Full Stack Developer
-              </h5>
-
-              <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>Quality Assurance Engineer
-              </h5>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- Matheus Moraes -->
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-          <div class="team-item bg-light rounded overflow-hidden">
-            <div class="text-center py-4">
-              <div>
-                <figure>
-                  <img src="./img/adm/matheus.png" alt="Matheus">
-                </figure>
-              </div>
-              <h4 class="text-primary ">Matheus Moraes</h4>
-              <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>Marketing
-              </h5>
-
-              <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>Gerente Financeiro
-              </h5>
-
-              <h5 class="mb-3">
-                <i class="bi bi-caret-right-fill"></i>Web Designer
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-          <div class="team-item bg-light rounded overflow-hidden">
-            <div class="team-img position-relative overflow-hidden">
-              <div class="text-center py-4">
-                <div>
-                  <figure>
-                    <img src="./img/adm/sem-foto.jpg" alt="Pode ser você">
-                  </figure>
-                </div>
-                <h4 class="text-primary">Venha trabalhar conosco</h4>
-                <h5 class="mb-3">
-                  <i class="bi bi-caret-right-fill"></i>Prospectiva de Carreira
-                </h5>
-
-                <h5 class="mb-3">
-                  <i class="bi bi-caret-right-fill"></i>Shadow Inicial
-                </h5>
-
-                <h5 class="mb-3">
-                  <i class="bi bi-caret-right-fill"></i>Faça parte da equipe
-                </h5>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container">
-        <div class="row gx-5">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-              <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 text-white">
-                  <img src="img/logogg.png" alt="Logo img" width="150px">
-                  <i class=""></i>Vetor256.
-                </h1>
-              </a>
-              <p class="mt-3 mb-4 text-white">
-                Nossa empresa preza pela transparência e estamos prontos a
-                escutar, absorver, fazer novas amizades, expandir nosso Time
-                compartilhar e ensinar smpre que necessário. Engajamento é tudo
-                no mundo comercial de hoje. Escreva-nos.
-              </p>
-              <!-- Formulário rodapé -->
-              <form action="mailto:adm.vetor256@gmail.com" method="post" id="footerEmailForm" accept-charset="UTF-8">
-                <div class="row g-3">
-                  <div class="col-xl-12">
-                    <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
-                      style="height: 55px" />
-                  </div>
-                  <div class="col-12">
-                    <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
-                      style="height: 55px" />
-                  </div>
-                  <div class="col-12">
-                    <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px">
-                      <option value="" selected>Selecione um Plano</option>
-                      <option value="Plano Básico">Plano Básico</option>
-                      <option value="Plano Standard">Plano Standard</option>
-                      <option value="Plano Advanced">Plano Advanced</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg"
-                      placeholder="Mensagem"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button id="emailLink" class="btn btn-dark w-100 py-3" type="button">Peça seu orçamento</button>
-                  </div>
-                </div>
-              </form>
-
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-6">
-            <div class="row gx-5">
-              <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                <div class="container-fluid text-primary section-title-sm position-relative pb-3 mb-4">
-                  <h3 class="text-light mb-0">Entre em contato</h3>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="bi bi-geo-alt text-primary me-2"></i>
-                  <p class="mb-0">Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP - Brasil</p>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="bi bi-envelope-open text-primary me-2"></i>
-                  <p class="mb-0">adm.vetor256@gmail.com</p>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="bi bi-telephone text-primary me-2"></i>
-                  <p class="mb-0">+55 (19) 99674 5466</p>
-                </div>
-                <div class="d-flex mt-4">
-                  <a class="btn btn-primary btn-square me-2"
-                    href="https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw" target="_blank"
-                    title="Visitar Youtube"><i class="fab fa-youtube fw-normal"></i></a>
-
-                  <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/joseisaiaslourenco"
-                    target="_blank" title="Visitar Facebook"><i class="bi bi-facebook text-uppercase"></i></a>
-
-                  <a class="btn btn-primary btn-square me-2"
-                    href="https://www.linkedin.com/in/isaias-louren%C3%A7o-5265b425a/" target="_blank"
-                    title="Visitar Linkedin"><i class="fab fa-linkedin fw-normal"></i></a>
-
-                  <a class="btn btn-primary btn-square me-2" href="https://www.instagram.com/isaiaslourenco3/"
-                    target="_blank" title="Visitar Instagram"><i class="fab fa-instagram fw-normal"></i></a>
-
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                  <h3 class="text-light mb-0">Links</h3>
-                </div>
-                <div class="link-animated d-flex flex-column justify-content-start">
-                  <a class="text-light mb-2" href="index.html"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                  <a class="text-light mb-2" href="about.html"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Sobre</a>
-                  <a class="text-light mb-2" href="service.html"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Serviços</a>
-                  <a class="text-light mb-2" href="team.html"><i class="bi bi-arrow-right text-primary me-2"></i>Conheça
-                    nosso Time</a>
-                  <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Últimas
-                    do Blog</a>
-                  <a class="text-light" href="contact.html"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Contato</a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                  <h3 class="text-light mb-0">Últimas Notícias do mundo da T.I.</h3>
-                </div>
-                <div class="link-animated d-flex flex-column justify-content-start">
-                  <a class="text-light mb-2" target="_blank"
-                    href="https://www.tudocelular.com/seguranca/noticias/n230464/ransomware-baseado-em-ia-faz-vitimas-no-brasil.html"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Ransoware faz vítimas no Brasil</a>
-                  <a class="text-light mb-2" target="_blank"
-                    href="https://www.tecmundo.com.br/seguranca/401460-imposto-do-cachorrinho-pf-vai-investigar-deepfake-de-haddad.htm"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Imposto do cachorrinho </a>
-                  <a class="text-light mb-2" target="_blank"
-                    href="https://www.msn.com/pt-br/noticias/ciencia-e-tecnologia/riscos-cibern%C3%A9ticos-em-2025-o-que-voc%C3%AA-precisa-saber-para-n%C3%A3o-ser-pego-de-surpresa/ar-BB1rbHCX"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Riscos cibernéticos em 2025</a>
-                  <a class="text-light mb-2" target="_blank"
-                    href="https://g1.globo.com/mundo/noticia/2025/02/03/trump-diz-que-musk-nao-pode-e-nao-fara-nada-sem-aprovacao-e-casa-branca-afirma-que-bilionario-nao-recebe-salario-dos-eua.ghtml"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Trump e Elon Musk</a>
-                  <a class="text-light mb-2" target="_blank"
-                    href="https://www.cnnbrasil.com.br/tecnologia/meta-remove-filtros-do-instagram-nesta-terca-14-veja-o-que-muda/"><i
-                      class="bi bi-arrow-right text-primary me-2"></i>Instagram remove 14 filtros</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid text-primary" style="background: #061429">
-      <div class="container text-center">
-        <div class="row justify-content-end">
-          <div class="col-lg-8 col-md-6">
-            <div class="d-flex align-items-center justify-content-center" style="height: 75px">
-              <p class="mb-0">
-                &copy;
-                <a class="border-bottom" href="index.html">Vetor256.</a> Todos os direitos
-                reservados.
-
-                Desenvolvido por
-
-                <a class="border-bottom" href="index.html">Vetor256.</a>&copy;
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top">
-      <i class="bi bi-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
+    <!-- Chamando within_price -->
+    <div id="within_price"></div>
     <script>
-      function recarregarAPagina() {
-        window.location.reload();
-      } 
+      fetch("within_price.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("within_price").innerHTML = data);
     </script>
+    <!-- Fim do Chamando within_price -->
 
-    <script src="./js/busca.js" defer></script>
+  <!-- Chamando within_quote -->
+  <div id="within_quote"></div>
+  <script>
+    fetch("within_quote.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_quote").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando within_quote -->
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <!-- Chamando team -->
+  <div id="team"></div>
+  <script>
+    fetch("within_team.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("team").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando do team -->
 
-    <script>
-      // Back to top button
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          $('.back-to-top').addClass('show');  // Torna o botão visível
-        } else {
-          $('.back-to-top').removeClass('show');  // Esconde o botão
-        }
-      });
+  <!-- Chamando rodape -->
+  <div id="rodape"></div>
+  <script>
+    fetch("rodape.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("rodape").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando rodape -->
 
-      // Quando clicar no botão
-      $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
-        return false;  // Impede o comportamento padrão do link
-      });
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
 
-    </script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <script>
+    function recarregarAPagina() {
+      window.location.reload();
+    } 
+  </script>
+
+  <script src="./js/busca.js" defer></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+
+  <script>
+    // Back to top button
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('.back-to-top').addClass('show');  // Torna o botão visível
+      } else {
+        $('.back-to-top').removeClass('show');  // Esconde o botão
+      }
+    });
+
+    // Quando clicar no botão
+    $('.back-to-top').click(function () {
+      $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+      return false;  // Impede o comportamento padrão do link
+    });
+
+  </script>
 
 </body>
 
