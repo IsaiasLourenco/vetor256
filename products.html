@@ -1,16 +1,15 @@
-<?php require_once("config.php") ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo $nome_site ?></title>
+  <title>Vetor256.</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="Free HTML Templates" name="keywords">
   <meta content="Free HTML Templates" name="description">
 
   <!-- Favicon -->
-  <link href="img/oficiallogo.ico" rel="icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/adm/oficiallogo.ico">
 
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +25,7 @@
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/portfolio.css">
 
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,14 +42,21 @@
   </div>
   <!-- Spinner End -->
 
-  <?php require_once("toolbar.php"); ?>
+  <!-- Chamando topbar -->
+  <div id="topbar"></div>
+  <script>
+    fetch("topbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("topbar").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando topbar -->
 
   <!-- Navbar Start -->
   <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-      <a href="index.php" class="navbar-brand p-0">
+      <a href="index.html" class="navbar-brand p-0">
         <h1 class="m-0"><img src="img/logogg.png" width="60px" alt="Logo img" />
-          <i class=""></i><?php echo $nome_site ?>
+          <i class=""></i>Vetor256.
         </h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -57,31 +64,24 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-          <a href="index.php" class="nav-item nav-link">Home</a>
-          <a href="about.php" class="nav-item nav-link">Sobre</a>
-          <a href="service.php" class="nav-item nav-link">Serviços</a>
-          <!--<div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-            <div class="dropdown-menu m-0">
-              <a href="blog.php" class="dropdown-item">Blog Grid</a>
-              <a href="detail.php" class="dropdown-item">Blog Detail</a>
-            </div>
-          </div>-->
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">Sobre</a>
+          <a href="service.html" class="nav-item nav-link">Serviços</a>
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Conteúdo</a>
             <div class="dropdown-menu m-0">
-              <a href="price.php" class="dropdown-item">Preços</a>
-              <a href="feature.php" class="dropdown-item">Habilidades</a>
-              <a href="team.php" class="dropdown-item">Equipe</a>
+              <a href="price.html" class="dropdown-item">Preços</a>
+              <a href="feature.html" class="dropdown-item">Habilidades</a>
+              <a href="team.html" class="dropdown-item">Equipe</a>
               <!--<a href="testimonial.html" class="dropdown-item">Testimonial</a>-->
-              <a href="quote.php" class="dropdown-item">Orçamento</a>
+              <a href="quote.html" class="dropdown-item">Orçamento</a>
             </div>
           </div>
-          <a href="contact.php" class="nav-item nav-link">Contato</a>
+          <a href="contact.html" class="nav-item nav-link">Contato</a>
         </div>
         <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i
             class="fa fa-search"></i></butaton>
-        <a href="products.php" class="btn btn-primary py-2 px-4 me-3 slideInLeft active">Produtos</a>
+        <a href="products.html" class="btn btn-primary py-2 px-4 me-3 slideInLeft active">Produtos</a>
       </div>
     </nav>
 
@@ -98,9 +98,9 @@
                   Sites <i class="bi bi-textarea-resize"></i>
                 </h1>
               </h5>
-              <a href="quote.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamento
+              <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamento
                 Gratuito</a>
-              <a href="contact.php" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contato</a>
+              <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contato</a>
             </div>
           </div>
         </div>
@@ -115,9 +115,9 @@
                   API's <i class="bi bi-textarea-resize"></i>
                 </h1>
               </h1>
-              <a href="quote.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamento
+              <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamento
                 Gratuito</a>
-              <a href="contact.php" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contato</a>
+              <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contato</a>
             </div>
           </div>
         </div>
@@ -132,257 +132,277 @@
       <span class="visually-hidden">Próximo </span>
     </button>
   </div>
-  </div>
   <!-- Navbar End -->
 
-  <?php require_once("search.php"); ?>
-
-  <?php require_once("facts.php"); ?>
-
-  <!-- Pricing Plan Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
-        <h5 class="fw-bold text-primary text-uppercase">
-          Nossos Entregáveis
-        </h5>
-        <h1 class="mb-0">
-          As pérolas conquistadas com nosso trabalho, além da satisfaçã dos
-          clientes que estão diariamente nos ajudando a melhorar ainda mais.
-          Fique à vontade na nossa prateleira!
-        </h1>
-      </div>
-      <div class="row g-0">
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-          <div class="bg-light rounded">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Aplicativos</h4>
-              <small class="text-uppercase">Para trabalhos em conjunto ou separados</small>
-            </div>
-            <div class="p-5 pt-0">
-              <h1 class="display-5 mb-3">
-                <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ App</small>
-              </h1>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Ionic</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>React</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>SQL</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Stand Alone ou Agregado</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <a href="quote.php" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
+  <!-- Procura por palavras -->
+  <div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content" style="background: rgba(9, 30, 62, 0.7)">
+        <div class="modal-header border-0">
+          <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-          <div class="bg-white rounded shadow position-relative" style="z-index: 1">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Softwares</h4>
-              <small class="text-uppercase">Sistemas de Gerenciamento e Controle</small>
-            </div>
-            <div class="p-5 pt-0">
-              <h1 class="display-5 mb-3">
-                <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Item</small>
-              </h1>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Estoque/Compras/Vendas</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Fluxo de Caixa</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Microsserviços</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>SQL</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <a href="quote.php" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-          <div class="bg-light rounded">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Sites</h4>
-              <small class="text-uppercase">Seu negócio na Internet e no mundo inteiro</small>
-            </div>
-            <div class="p-5 pt-0">
-              <h1 class="display-5 mb-3">
-                <small class="align-top" style="font-size: 22px; line-height: 45px">$</small>Ligue<small
-                  class="align-bottom" style="font-size: 16px; line-height: 40px">/ Site</small>
-              </h1>
-              <div class="d-flex justify-content-between mb-3">
-                <span>HTML5 & CSS3</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Bootstrap v5</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Layout Responsivo</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Ajax</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <a href="quote.php" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
+        <div class="modal-body d-flex align-items-center justify-content-center">
+          <div class="input-group" style="max-width: 600px">
+            <input type="text" id="searchInput" class="form-control bg-transparent border-primary p-3"
+              placeholder="Digite a palavra que quer achar" />
+            <button class="btn btn-primary px-4" id="searchButton">
+              <i class="bi bi-search"></i>
+            </button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- Fim da Procura por palavras -->
 
-      <div class="row g-0">
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-          <div class="bg-white rounded">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Ordens de Serviço e Vendas</h4>
-              <small class="text-uppercase">Oficinas Mecânicas, Assistência Técnica e Vendas de Peças e
-                Acessórios</small>
-            </div>
-            <div class="p-5 pt-0">
+  <!-- Chamando facts -->
+  <div id="facts"></div>
+  <script>
+    fetch("facts.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("facts").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando facts -->
 
-              <div class="d-flex justify-content-between mb-3">
-                <span>Ponto de Venda</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Controle de Orçamentos</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Envio para o email do cliente</span><i class="fa fa-check text-faded pt-1"
-                  style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Estoque Baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Relatórios de todos produtos e serviços</span><i class="fa fa-check text-faded pt-1"
-                  style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Aplicativo incluso ou não</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <a href="quote.php" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-          <div class="bg-light rounded shadow position-relative" style="z-index: 1">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Restaurantes</h4>
-              <small class="text-uppercase">Sistemas de Gerenciamento para Restaurantes e Lanchonetes</small>
-            </div>
-            <div class="p-5 pt-0">
+  <!-- Chamando within_price -->
+  <div id="within_price"></div>
+  <script>
+    fetch("within_price.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_price").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando within_price -->
 
+  <div class="row g-0">
 
-              <div class="position-relative h-100">
-                <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s"
-                  src="img/hablidades.jpg" style="object-fit: cover" />
-              </div>
+    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
 
+      <div class="bg-white rounded">
 
-
-              <div class="d-flex justify-content-between mb-3">
-                <span>Reserva de mesas</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Estoque baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Fluxo de Caixa</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Cardápio direto nos relatórios</span><i class="fa fa-check text-faded pt-1"
-                  style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Pedidos da mesa direto para a cozinha</span><i class="fa fa-check text-faded pt-1"
-                  style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Aplicativo Ionic - Android e Ios</span><i class="fa fa-check text-faded pt-1"
-                  style="color:green"></i>
-              </div>
-              <a href="quote.php" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-          <div class="bg-white rounded">
-            <div class="border-bottom py-4 px-5 mb-4">
-              <h4 class="text-primary mb-1">Mercados, Padarias e Lojas</h4>
-              <small class="text-uppercase">Gestão completa, de Estoque, fluxo de entrada e saída e PDV</small>
-            </div>
-            <div class="p-5 pt-0">
-
-              <div class="d-flex justify-content-between mb-3">
-                <span>Ponto de Venda</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Estoque Baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <span>Relatórios em PDF</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Controle de funcionários e cientes</span><i class="fa fa-check text-faded pt-1"
-                  style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Controle fichas, contaas a receber</span><i class="fa fa-check text-faded pt-1"
-                  style="color:green"></i>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Aplicativo incluso ou não</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-              </div>
-              <a href="quote.php" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-0">
-
-
-        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px">
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s"
-              src="img/LorenzoResst3.JPG" style="object-fit: cover" />
-          </div>
+        <div class="border-bottom py-4 px-5 mb-4">
+          <h4 class="text-primary mb-1">Ordens de Serviço e Vendas</h4>
+          <small class="text-uppercase">Oficinas Mecânicas, Assistência Técnica e Vendas de Peças e
+            Acessórios</small>
         </div>
 
+        <div class="p-5 pt-0">
 
-        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px">
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s"
-              src="img/LorenzoResst.JPG" style="object-fit: cover" />
+          <div class="d-flex justify-content-between mb-3">
+            <span>Ponto de Venda</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
           </div>
-        </div>
-
-        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px">
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s"
-              src="img/LorenzoResst2.JPG" style="object-fit: cover" />
+          <div class="d-flex justify-content-between mb-3">
+            <span>Controle de Orçamentos</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
           </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Envio para o email do cliente</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Estoque Baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Relatórios de todos produtos e serviços</span><i class="fa fa-check text-faded pt-1"
+              style="color:green"></i>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span>Aplicativo incluso ou não</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
         </div>
-
-
 
       </div>
 
     </div>
+
+    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+
+      <div class="bg-light rounded shadow position-relative" style="z-index: 1">
+
+        <div class="border-bottom py-4 px-5 mb-4">
+          <h4 class="text-primary mb-1">Restaurantes</h4>
+          <small class="text-uppercase">Sistemas de Gerenciamento para Restaurantes e Lanchonetes</small>
+        </div>
+
+        <div class="p-5 pt-0">
+
+          <div class="position-relative h-100">
+            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/hablidades.jpg"
+              style="object-fit: cover" />
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Reserva de mesas</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Estoque baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Fluxo de Caixa</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Cardápio direto nos relatórios</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Pedidos da mesa direto para a cozinha</span><i class="fa fa-check text-faded pt-1"
+              style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-2">
+            <span>Aplicativo Ionic - Android e Ios</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+
+      <div class="bg-white rounded">
+
+        <div class="border-bottom py-4 px-5 mb-4">
+          <h4 class="text-primary mb-1">Mercados, Padarias e Lojas</h4>
+          <small class="text-uppercase">Gestão completa, de Estoque, fluxo de entrada e saída e PDV</small>
+        </div>
+
+        <div class="p-5 pt-0">
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Ponto de Venda</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Estoque Baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span>Relatórios em PDF</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-2">
+            <span>Controle de funcionários e cientes</span><i class="fa fa-check text-faded pt-1"
+              style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-2">
+            <span>Controle fichas, contaas a receber</span><i class="fa fa-check text-faded pt-1"
+              style="color:green"></i>
+          </div>
+
+          <div class="d-flex justify-content-between mb-2">
+            <span>Aplicativo incluso ou não</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
+          </div>
+
+          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+
+      <div class="border-bottom py-4 px-5 mb-4">
+        <h4 class="text-primary mb-1">Nossos entregáveis →</h4>
+      </div>
+
+      <div class="bg-white rounded">
+
+        <div class="p-5 pt-0">
+
+          <!-- Vetor256. -->
+          <div class="itemportfolio">
+            <a href="https://isaiaslourenco.github.io/vetor256/" target="_blank"><img class="img-portfolio"
+                src="./img/portfolio/vetor256.png" alt="Vetor256." title="Site da empresa de informática Vetor256."
+                width="450px" height="250px"></a>
+            <h6 class="title">Vetor256.</h6>
+          </div>
+          <!-- Fim Vetor256. -->
+
+          <!-- X-Men -->
+          <div class="itemportfolio">
+            <a href="https://isaiaslourenco.github.io/xmen/" target="_blank"><img class="img-portfolio"
+                src="./img/portfolio/xmen.png" alt="X-Men"
+                title="Projeto feito na semana 'Do zero ao programador contratado' da Dev em Dobro. CSS com rolagem na lista principal para adição de personagens." width="450px" height="250px"></a>
+            <h6 class="title">X-Men</h6>
+          </div>
+          <!-- Fim X-Men -->
+
+          <!-- Single Page CV -->
+          <div class="itemportfolio">
+            <a href="https://isaiaslourenco.github.io/Single-Page-CV/" target="_blank"><img class="img-portfolio"
+                src="./img/portfolio/printCV.png" alt="Single-Page-CV"
+                title="Projeto feito em HTML E CSS para apresentar meus históricos e habilidades em uma página simples. Projeto tirado do site Front Mentor" width="450px" height="250px"></a>
+            <h6 class="title">Single-Page-CV</h6>
+          </div>
+          <!-- Fim Single Page CV -->
+
+          <!-- Avengers -->
+          <div class="itemportfolio">
+            <a href="https://isaiaslourenco.github.io/avengers/" target="_blank"><img class="img-portfolio"
+                src="./img/portfolio/avengers.png" alt="Avengers"
+                title="Projeto feito na semana 'Do zero ao programador contratado' da Dev em Dobro, inspirado no dos X-Men. Em vez de CSS esse lida com listas desordenadas utilizando JavaScript." width="450px" height="250px"></a>
+            <h6 class="title">Avengers</h6>
+          </div>
+          <!-- Fim Avengers -->
+
+          <!-- First JavaSprit -->
+          <div class="itemportfolio">
+            <a href="https://isaiaslourenco.github.io/java-script-select/" target="_blank"><img class="img-portfolio"
+                src="./img/portfolio/JS.png" alt="JavaScript"
+                title="Projeto feito por iniciativa própria na expectativa de iniciar a graadução de Full Stack, estou para iniciar o JavaScript e quero começar pronto!" width="450px" height="250px"></a>
+            <h6 class="title">JavaScript</h6>
+          </div>
+          <!-- Fim First JavaSprit -->
+
+          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+
+    </div>
+
   </div>
   <!-- Pricing Plan End -->
 
-  <?php require_once("within_price.php"); ?>
+  <!-- Chamando within_price -->
+  <div id="within_price"></div>
+  <script>
+    fetch("within_price.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_price").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando within_price -->
 
-  <?php require_once("within_quote.php"); ?>
+  <!-- Chamando within_quote -->
+  <div id="within_quote"></div>
+  <script>
+    fetch("within_quote.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_quote").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando within_quote -->
 
-  <?php require_once("rodape.php"); ?>
+  <!-- Chamando rodape -->
+  <div id="rodape"></div>
+  <script>
+    fetch("rodape.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("rodape").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando rodape -->
 
   <!-- Back to Top -->
   <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
