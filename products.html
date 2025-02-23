@@ -173,209 +173,23 @@
   </script>
   <!-- Fim do Chamando within_price -->
 
-  <div class="row g-0">
+  <!-- Chamando within_product -->
+  <div id="within_products"></div>
+  <script>
+    fetch("within_products.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_products").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando within_price -->
 
-    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-
-      <div class="bg-white rounded">
-
-        <div class="border-bottom py-4 px-5 mb-4">
-          <h4 class="text-primary mb-1">Ordens de Serviço e Vendas</h4>
-          <small class="text-uppercase">Oficinas Mecânicas, Assistência Técnica e Vendas de Peças e
-            Acessórios</small>
-        </div>
-
-        <div class="p-5 pt-0">
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Ponto de Venda</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-          <div class="d-flex justify-content-between mb-3">
-            <span>Controle de Orçamentos</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-          <div class="d-flex justify-content-between mb-3">
-            <span>Envio para o email do cliente</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-          <div class="d-flex justify-content-between mb-3">
-            <span>Estoque Baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-          <div class="d-flex justify-content-between mb-3">
-            <span>Relatórios de todos produtos e serviços</span><i class="fa fa-check text-faded pt-1"
-              style="color:green"></i>
-          </div>
-          <div class="d-flex justify-content-between mb-3">
-            <span>Aplicativo incluso ou não</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-
-      <div class="bg-light rounded shadow position-relative" style="z-index: 1">
-
-        <div class="border-bottom py-4 px-5 mb-4">
-          <h4 class="text-primary mb-1">Restaurantes</h4>
-          <small class="text-uppercase">Sistemas de Gerenciamento para Restaurantes e Lanchonetes</small>
-        </div>
-
-        <div class="p-5 pt-0">
-
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/hablidades.jpg"
-              style="object-fit: cover" />
-          </div>
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Reserva de mesas</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Estoque baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Fluxo de Caixa</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Cardápio direto nos relatórios</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Pedidos da mesa direto para a cozinha</span><i class="fa fa-check text-faded pt-1"
-              style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-2">
-            <span>Aplicativo Ionic - Android e Ios</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-
-      <div class="bg-white rounded">
-
-        <div class="border-bottom py-4 px-5 mb-4">
-          <h4 class="text-primary mb-1">Mercados, Padarias e Lojas</h4>
-          <small class="text-uppercase">Gestão completa, de Estoque, fluxo de entrada e saída e PDV</small>
-        </div>
-
-        <div class="p-5 pt-0">
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Ponto de Venda</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Estoque Baixo -> Compras</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-3">
-            <span>Relatórios em PDF</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-2">
-            <span>Controle de funcionários e cientes</span><i class="fa fa-check text-faded pt-1"
-              style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-2">
-            <span>Controle fichas, contaas a receber</span><i class="fa fa-check text-faded pt-1"
-              style="color:green"></i>
-          </div>
-
-          <div class="d-flex justify-content-between mb-2">
-            <span>Aplicativo incluso ou não</span><i class="fa fa-check text-faded pt-1" style="color:green"></i>
-          </div>
-
-          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-
-      <div class="border-bottom py-4 px-5 mb-4">
-        <h4 class="text-primary mb-1">Nossos entregáveis →</h4>
-      </div>
-
-      <div class="bg-white rounded">
-
-        <div class="p-5 pt-0">
-
-          <!-- Vetor256. -->
-          <div class="itemportfolio">
-            <a href="https://isaiaslourenco.github.io/vetor256/" target="_blank"><img class="img-portfolio"
-                src="./img/portfolio/vetor256.png" alt="Vetor256." title="Site da empresa de informática Vetor256."
-                width="450px" height="250px"></a>
-            <h6 class="title">Vetor256.</h6>
-          </div>
-          <!-- Fim Vetor256. -->
-
-          <!-- X-Men -->
-          <div class="itemportfolio">
-            <a href="https://isaiaslourenco.github.io/xmen/" target="_blank"><img class="img-portfolio"
-                src="./img/portfolio/xmen.png" alt="X-Men"
-                title="Projeto feito na semana 'Do zero ao programador contratado' da Dev em Dobro. CSS com rolagem na lista principal para adição de personagens." width="450px" height="250px"></a>
-            <h6 class="title">X-Men</h6>
-          </div>
-          <!-- Fim X-Men -->
-
-          <!-- Single Page CV -->
-          <div class="itemportfolio">
-            <a href="https://isaiaslourenco.github.io/Single-Page-CV/" target="_blank"><img class="img-portfolio"
-                src="./img/portfolio/printCV.png" alt="Single-Page-CV"
-                title="Projeto feito em HTML E CSS para apresentar meus históricos e habilidades em uma página simples. Projeto tirado do site Front Mentor" width="450px" height="250px"></a>
-            <h6 class="title">Single-Page-CV</h6>
-          </div>
-          <!-- Fim Single Page CV -->
-
-          <!-- Avengers -->
-          <div class="itemportfolio">
-            <a href="https://isaiaslourenco.github.io/avengers/" target="_blank"><img class="img-portfolio"
-                src="./img/portfolio/avengers.png" alt="Avengers"
-                title="Projeto feito na semana 'Do zero ao programador contratado' da Dev em Dobro, inspirado no dos X-Men. Em vez de CSS esse lida com listas desordenadas utilizando JavaScript." width="450px" height="250px"></a>
-            <h6 class="title">Avengers</h6>
-          </div>
-          <!-- Fim Avengers -->
-
-          <!-- First JavaSprit -->
-          <div class="itemportfolio">
-            <a href="https://isaiaslourenco.github.io/java-script-select/" target="_blank"><img class="img-portfolio"
-                src="./img/portfolio/JS.png" alt="JavaScript"
-                title="Projeto feito por iniciativa própria na expectativa de iniciar a graadução de Full Stack, estou para iniciar o JavaScript e quero começar pronto!" width="450px" height="250px"></a>
-            <h6 class="title">JavaScript</h6>
-          </div>
-          <!-- Fim First JavaSprit -->
-
-          <a href="quote.html" class="btn btn-primary py-2 px-4 mt-4">Faça seu pedido</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-
-    </div>
-
-  </div>
-  <!-- Pricing Plan End -->
+  <!-- Chamando within_portfolio -->
+  <div id="within_portfolio"></div>
+  <script>
+    fetch("within_portfolio.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("within_portfolio").innerHTML = data);
+  </script>
+  <!-- Fim do Chamando within_price -->
 
   <!-- Chamando within_price -->
   <div id="within_price"></div>
