@@ -10,7 +10,8 @@ Este software puramente estático apresenta as qualificações, histórico e rep
 
 - Construção do site e sistema 
     - HTML;
-    - CSS.
+    - CSS,
+    - JavaScript.
 
 ## Inicialização
 
