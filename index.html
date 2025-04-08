@@ -114,8 +114,8 @@
           <a href="quote.html" class="nav-item nav-link">Orçamento</a>
           <a href="contact.html" class="nav-item nav-link">Contato</a>
         </div>
-        <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i
-            class="fa fa-search"></i></butaton>
+        <butaton type="button" class="btn text-primary ms-3"><i
+            class="fa fa-celphone"></i></butaton>
         <a href="products.html" class="btn btn-primary py-2 px-4 me-3 slideInLeft">Produtos</a>
       </div>
     </nav>
@@ -138,7 +138,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="w-100" src="img/carro-2.jpg" alt="Image" />
+          <img class="w-100" src="img/blog-9.jpg" alt="Image" />
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div class="p-3" style="max-width: 900px">
               <h5 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -163,16 +163,7 @@
       </button>
     </div>
   </div>
-  <!-- Navbar & Carousel End -->
-
-  <!-- Chamando search -->
-  <div id="search"></div>
-  <script>
-    fetch("search.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("search").innerHTML = data);
-  </script>
-  <!-- Fim do Chamando search -->
+  <!-- Navbar & Carousel End -->  
 
   <!-- Chamando facts -->
   <div id="facts"></div>
@@ -228,15 +219,6 @@
   </script>
   <!-- Fim do Chamando within_quote -->
 
-  <!-- Chamando team -->
-  <div id="team"></div>
-  <script>
-    fetch("within_team.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("team").innerHTML = data);
-  </script>
-  <!-- Fim do Chamando do team -->
-
   <!-- Chamando rodape -->
   <div id="rodape"></div>
   <script>
@@ -247,9 +229,7 @@
   <!-- Fim do Chamando rodape -->
 
   <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top">
-    <i class="bi bi-arrow-up"></i>
-  </a>
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -265,8 +245,6 @@
       window.location.reload();
     } 
   </script>
-
-  <script src="./js/busca.js" defer></script>
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
