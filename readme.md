@@ -45,8 +45,8 @@ Na Vetor256, acreditamos que a tecnologia pode transformar o mundo e impactar po
 ## 📫 Entre em contato
 
 Quer saber mais ou iniciar um projeto conosco?  
-**E-mail:** adm.vetor256@gmail.com.br  
-**Site:** [www.vetor256.com.br](https://isaiaslourenco.github.io/vetor256/)  
+**E-mail:** isaias@vetor256.com  
+**Site:** [www.vetor256.com.br](https:vetor256.com)  
 <img src="./img/adm/Cartão de Visitas Vetor256.-1.png" alt="Vetor256.">
 
 <img src="./img/adm/logotipo-do-github.png" alt="Github"> https://github.com/IsaiasLourenco<br>
