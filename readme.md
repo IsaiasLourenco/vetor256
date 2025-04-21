@@ -49,6 +49,9 @@ Quer saber mais ou iniciar um projeto conosco?
 **Site:** [www.vetor256.com.br](https:vetor256.com)  
 <img src="./img/adm/Cartão de Visitas Vetor256.-1.png" alt="Vetor256.">
 
+<a href="https://github.com/IsaiasLourenco/vetor256" target="_blank"> 💻 Repositório </a> <br>
+<a href="https://vetor256.com" target="_blank">🔗 Site - PDV</a>
+
 <img src="./img/adm/logotipo-do-github.png" alt="Github"> https://github.com/IsaiasLourenco<br>
 <img src="./img/adm/logotipo-do-linkedin.png" alt="Linkedin"> https://www.linkedin.com/in/isaias-louren%C3%A7o/
 ---
