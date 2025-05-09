@@ -1,42 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function setupEmailForm(formId, buttonClass) {
-        let checkExist = setInterval(() => {
-            let form = document.getElementById(formId);
-            if (form) {
-                clearInterval(checkExist); // Para de verificar quando o elemento existir
-                let button = form.querySelector(`.${buttonClass}`);
-                if (button) {
-                    button.addEventListener("click", function (event) {
-                        let nome = form.querySelector('[name="nome_msg"]').value.trim();
-                        let email = form.querySelector('[name="email_msg"]').value.trim();
-                        let plano = form.querySelector('[name="plano_msg"]').value.trim();
-                        let mensagem = form.querySelector('[name="mensagem_msg"]').value.trim();
+    function sendEmail(event) {
+        event.preventDefault(); // Evita abrir Outlook ou outro cliente de email
 
-                        if (nome === "" || email === "" || plano === "" || mensagem === "") {
-                            alert("Por favor, preencha todos os campos antes de enviar.");
-                            return;
-                        }
+        let form = document.getElementById("emailForm");
+        let formData = new FormData(form);
 
-                        let mailtoLink = `mailto:adm.vetor256@gmail.com
-                            ?subject=Novo Orçamento
-                            &body=Nome: ${encodeURIComponent(nome)}%0A
-                            Email: ${encodeURIComponent(email)}%0A
-                            Plano: ${encodeURIComponent(plano)}%0A
-                            Mensagem: ${encodeURIComponent(mensagem)}`;
-
-                        setTimeout(() => {
-                            window.location.href = mailtoLink;
-                        }, 500);
-
-                        setTimeout(() => {
-                            form.reset();
-                        }, 700);
-                    });
-                }
-            }
-        }, 100); // Verifica a cada 100ms até que o rodapé esteja carregado
+        fetch("send_email.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            alert(result); // Exibe resposta do PHP
+            form.reset(); // Limpa o formulário após envio
+        })
+        .catch(error => {
+            alert("Erro ao enviar o email. Tente novamente.");
+        });
     }
 
-    setupEmailForm("emailForm", "btn-dark");
-    setupEmailForm("footerEmailForm", "btn-dark");
+    // Configura evento de clique no botão
+    let button = document.querySelector(".btn-dark");
+    if (button) {
+        button.addEventListener("click", sendEmail);
+    }
 });
