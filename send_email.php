@@ -1,41 +1,55 @@
 <?php
 
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+require 'src/Exception.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'src/Exception.php';
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
+// Configurar cabeçalhos para garantir que a resposta seja JSON
+header('Content-Type: application/json'); 
+header('Access-Control-Allow-Origin: *');
 
+// Inicializar PHPMailer
 $mail = new PHPMailer(true);
 
 try {
-    // Configurações do servidor SMTP
     $mail->isSMTP();
-    $mail->Host = 'mail.vetor256.com'; // Substitua pelo SMTP da HostGator (ex: mail.vetor256.com)
+    $mail->Host = 'mail.vetor256.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'isaias@vetor256.com'; // Substitua pelo seu e-mail da HostGator
-    $mail->Password = 'Mando452269$'; // Sua senha do e-mail
+    $mail->Username = 'isaias@vetor256.com';
+    $mail->Password = 'Mando452269$';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587; // Porta recomendada para SMTP
+    $mail->Port = 587;
 
-        // Configuração do remetente e destinatário
     $mail->setFrom('isaias@vetor256.com', 'Vetor256');
-    $mail->addAddress('isaias@vetor256.com'); // Destinatário
+    $mail->addAddress('isaias@vetor256.com');
 
-    // Coletar dados do formulário
-    $nome = $_POST['nome_msg'];
-    $email = $_POST['email_msg'];
-    $plano = $_POST['plano_msg'];
-    $mensagem = $_POST['mensagem_msg'];
+    if (isset($_POST['nome_msg'], $_POST['email_msg'], $_POST['plano_msg'], $_POST['mensagem_msg'])) {
+        $nome = htmlspecialchars($_POST['nome_msg'], ENT_QUOTES, 'UTF-8');
+        $email = filter_var($_POST['email_msg'], FILTER_SANITIZE_EMAIL);
+        $plano = htmlspecialchars($_POST['plano_msg'], ENT_QUOTES, 'UTF-8');
+        $mensagem = htmlspecialchars($_POST['mensagem_msg'], ENT_QUOTES, 'UTF-8');
 
-    // Conteúdo do e-mail
-    $mail->Subject = "Novo Pedido de Orçamento - $plano";
-    $mail->Body = "Nome: $nome\nEmail: $email\nPlano Escolhido: $plano\nMensagem:\n$mensagem";
-    
-    $mail->send();
-    echo "E-mail enviado com sucesso!";
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo json_encode(["message" => "Email inválido!"]);
+            exit;
+        }
+
+        $mail->Subject = "Novo Pedido de Orçamento - $plano";
+        $mail->Body = "Nome: $nome\nEmail: $email\nPlano Escolhido: $plano\nMensagem:\n$mensagem";
+
+        if ($mail->send()) {
+            echo json_encode(["message" => "E-mail enviado com sucesso!"]);
+        } else {
+            echo json_encode(["message" => "Falha ao enviar o e-mail. Tente novamente."]);
+        }
+    } else {
+        echo json_encode(["message" => "Dados do formulário inválidos."]);
+    }
+
 } catch (Exception $e) {
-    echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
+    echo json_encode(["message" => "Erro ao enviar o e-mail: {$mail->ErrorInfo}"]);
 }
 ?>
