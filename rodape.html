@@ -16,8 +16,7 @@
             compartilhar e ensinar smpre que necessário. Engajamento é tudo
             no mundo comercial de hoje. Escreva-nos.
           </p>
-          <!-- Formulário rodapé -->
-          <form id="footerEmailForm" method="POST" action="send_email.php">
+          <form method="POST" action="send_email.php">
             <div class="row g-3">
               <div class="col-xl-12">
                 <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
@@ -44,7 +43,6 @@
               </div>
             </div>
           </form>
-
         </div>
       </div>
       <div class="col-lg-8 col-md-6">
@@ -142,7 +140,7 @@
 <!-- Footer End -->
 
 <!-- AJAX PARA ENVIAR EMAIL -->
-<script>
+<!-- <script>
   document.addEventListener("DOMContentLoaded", function () {
     let form = document.getElementById("footerEmailForm");
 
@@ -162,14 +160,14 @@
           return response.json(); // Espera um JSON com a resposta
         })
         .then(data => {
-          alert(data.message); // 🚀 Exibe o alerta corretamente sem abrir nova aba
+          window.alert(data.message); // 🚀 Exibe o alerta corretamente sem abrir nova aba
           form.reset(); // 🔥 Limpa o formulário corretamente
         })
         .catch(error => {
-          alert("Erro ao enviar o email. Tente novamente.");
+          window.alert("Erro ao enviar o email. Tente novamente.");
         });
     });
   });
-</script>
+</script> -->
 
 <!-- FIM AJAX PARA ENVIAR EMAIL -->

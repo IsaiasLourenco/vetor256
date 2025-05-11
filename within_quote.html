@@ -57,9 +57,7 @@
           Mande-nos um email
         </h4>
         <div class=" bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-          <!-- Formulário corrigido -->
-
-          <form id="emailForm" method="POST" action="send_email.php">
+          <form method="POST" action="send_email.php">
             <div class="row g-3">
               <div class="col-xl-12">
                 <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
@@ -93,42 +91,3 @@
   </div>
 </div>
 <!-- Quote End -->
-
-<!-- AJAX PARA MANDAR EMAIL -->
- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    function handleForm(formId) {
-      const form = document.getElementById(formId);
-      if (!form) return;
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio tradicional
-
-        const formData = new FormData(form);
-
-        fetch("send_email.php", {
-          method: "POST",
-          body: formData
-        })
-          .then(response => response.text()) // ← espera texto
-          .then(data => {
-            if (data.trim() === "Salvo com Sucesso!") {
-              alert("Email enviado com sucesso!");
-              form.reset(); // limpa o formulário
-            } else {
-              alert("Erro: " + data);
-            }
-          })
-          .catch(error => {
-            alert("Erro ao enviar o email. Tente novamente.");
-            console.error(error);
-          });
-      });
-    }
-
-    handleForm("emailForm");
-    handleForm("footerEmailForm");
-  });
-</script>
-
-<!-- FIIM AJAX PARA MANDAR EMAIL -->
