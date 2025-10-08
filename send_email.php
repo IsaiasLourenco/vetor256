@@ -1,24 +1,28 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
 
 try {
     $mail->isSMTP();
-    $mail->Host       = 'mail.vetor256.com'; // ou smtp.hostgator.com.br
+    $mail->Host       = 'smtp.titan.email';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'isaias@vetor256.com'; // seu email completo
-    $mail->Password   = 'Mando452269$'; // senha do email
-    $mail->SMTPSecure = 'tls';
-    $mail->Port       = 587;
+    $mail->Username   = 'contato@vetor256.com'; // seu email completo
+    $mail->Password   = 'Vetor256Empresa@';     // senha do Titan
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // conexão segura SSL
+    $mail->Port       = 465; // porta SSL recomendada
 
-    $mail->setFrom('isaias@vetor256.com', 'Vetor256');
-    $mail->addAddress('isaias@vetor256.com'); // você mesmo
+    $mail->setFrom('contato@vetor256.com', 'Vetor256');
+    $mail->addAddress('contato@vetor256.com'); // destinatário
     $mail->addReplyTo($_POST['email_msg'], $_POST['nome_msg']);
 
     $mail->isHTML(false);
@@ -29,6 +33,6 @@ try {
     echo "<script>alert('Email enviado com sucesso!');</script>";
     echo "<meta http-equiv='refresh' content='0; url=index.html'>";
 } catch (Exception $e) {
-    echo "<script>alert('Erro ao enviar: {$mail->ErrorInfo}');</script>";
+    echo "<pre>Erro ao enviar: {$mail->ErrorInfo}</pre>";
 }
 ?>

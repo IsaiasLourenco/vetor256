@@ -96,6 +96,10 @@ h6,
   box-shadow: inset 0 0 0 0 var(--secondary);
 }
 
+.texto-menor {
+  font-size: 0.7rem;
+}
+
 .btn-square {
   width: 36px;
   height: 36px;

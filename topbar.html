@@ -1,50 +1,82 @@
+<link rel="stylesheet" href="css/style.css">
 <!-- Topbar Start -->
 <div class="container-fluid bg-dark px-5 d-none d-lg-block">
   <div class="row gx-0">
     <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-      <div class="d-inline-flex align-items-center" style="height: 45px;">
-        <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Rua Mococa, 880 Jd. Itacolomy - Mogi
-          Guaçu - SP - Brasil</small>
-        <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+55 (19) 97111 0538</small>
-        <small class="text-light"><i class="fa fa-envelope-open me-2"></i>isaias@vetor256.com</small>
+      <div class="d-inline-flex align-items-center texto-menor" style="height: 45px;">
+        <a href="https://maps.app.goo.gl/SFVz2LzEnj6S7cWz7" target="_blank" aria-label="Mapa" class="me-3 text-light">
+          <i class="fa fa-map-marker-alt me-2"></i>
+          Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP - Brasil
+        </a>
+        <a href="tel:+551938916797" aria-label="Ligar" class="me-3 text-light texto-menor">
+          <i class="fa fa-phone-alt me-2"></i>+55 (19) 97111 0538
+        </a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalContato" class="text-light texto-menor">
+          <i class="fa fa-envelope-open me-2"></i>
+          contato@vetor256.com
+        </a>
       </div>
     </div>
     <div class="col-lg-4 text-center text-lg-end">
       <div class="d-inline-flex align-items-center" style="height: 45px;">
         <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-           href="https://www.facebook.com/joseisaiaslourenco" 
-           target="_blank" 
-           title="Visitar Facebook"
-           aria-label="Abrir perfil do facebook da Vetor256">
+          href="https://www.facebook.com/joseisaiaslourenco" target="_blank" title="Visitar Facebook"
+          aria-label="Abrir perfil do facebook da Vetor256">
           <i class="fab fa-facebook-f fw-normal"></i>
         </a>
 
         <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-           href="https://www.instagram.com/isaiaslourenco3/" 
-           target="_blank" 
-           title="Visitar Instagram"
-           aria-label="Abrir perfil do instagram da Vetor256">
+          href="https://www.instagram.com/isaiaslourenco3/" target="_blank" title="Visitar Instagram"
+          aria-label="Abrir perfil do instagram da Vetor256">
           <i class="fab fa-instagram fw-normal"></i>
         </a>
 
         <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-           href="https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw" 
-           target="_blank" 
-           title="Visitar Youtube"
-           aria-label="Abrir perfil do youtube da Vetor256">
+          href="https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw" target="_blank" title="Visitar Youtube"
+          aria-label="Abrir perfil do youtube da Vetor256">
           <i class="fab fa-youtube fw-normal"></i>
         </a>
-
-        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-           href="https://maps.app.goo.gl/SFVz2LzEnj6S7cWz7" 
-           target="_blank"
-           title="Ver localização no Google Maps" 
-           aria-label="Abrir mapa da Vetor256 no Google Maps">
-          <i class="fa fa-map-marker-alt me-2"></i>
-        </a>
-
       </div>
     </div>
   </div>
 </div>
 <!-- Topbar End -->
+
+<!-- Modal -->
+<div class="modal fade" id="modalContato" tabindex="-1" aria-labelledby="modalContatoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <form method="POST" action="send_email.php" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalContatoLabel">Peça seu orçamento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-xl-12">
+            <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
+              style="height: 55px" required />
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
+              style="height: 55px" required />
+          </div>
+          <div class="col-12">
+            <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px" required>
+              <option value="" selected>Selecione um Plano</option>
+              <option value="Plano Básico">Plano Básico</option>
+              <option value="Plano Standard">Plano Standard</option>
+              <option value="Plano Advanced">Plano Advanced</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem"
+              required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-dark w-100 py-3" type="submit">Enviar mensagem</button>
+      </div>
+    </form>
+  </div>
+</div>
