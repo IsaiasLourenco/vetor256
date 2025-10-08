@@ -1,24 +1,34 @@
 <?php
-$nome = $_POST['nome_msg'];
-$email = $_POST['email_msg'];
-$plano = $_POST['plano_msg'];
-$mensagem = $_POST['mensagem_msg'];
-$assunto = 'Novo Orçamento do Site';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// Email que vai receber a mensagem (você)
-$destinatario = 'isaias@vetor256.com';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-$conteudo = "Nome: $nome\r\nEmail: $email\r\nPlano Escolhido: $plano\r\n\r\nMensagem: $mensagem\r\n";
+$mail = new PHPMailer(true);
 
-$cabecalhos = "From: $email\r\n"; // Quem está enviando
-$cabecalhos .= "Reply-To: $email\r\n";
-$cabecalhos .= "Content-Type: text/plain; charset=UTF-8\r\n";
+try {
+    $mail->isSMTP();
+    $mail->Host       = 'mail.vetor256.com'; // ou smtp.hostgator.com.br
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'isaias@vetor256.com'; // seu email completo
+    $mail->Password   = 'Mando452269$'; // senha do email
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
 
-// Envia para você
-mail($destinatario, $assunto, $conteudo, $cabecalhos);
+    $mail->setFrom('isaias@vetor256.com', 'Vetor256');
+    $mail->addAddress('isaias@vetor256.com'); // você mesmo
+    $mail->addReplyTo($_POST['email_msg'], $_POST['nome_msg']);
+
+    $mail->isHTML(false);
+    $mail->Subject = 'Novo Orçamento do Site';
+    $mail->Body    = "Nome: {$_POST['nome_msg']}\nEmail: {$_POST['email_msg']}\nPlano: {$_POST['plano_msg']}\n\nMensagem:\n{$_POST['mensagem_msg']}";
+
+    $mail->send();
+    echo "<script>alert('Email enviado com sucesso!');</script>";
+    echo "<meta http-equiv='refresh' content='0; url=index.html'>";
+} catch (Exception $e) {
+    echo "<script>alert('Erro ao enviar: {$mail->ErrorInfo}');</script>";
+}
 ?>
-
-<script>
-  alert('Email enviado com sucesso!');
-</script>
-<meta http-equiv="refresh" content="0; url=index.html">
