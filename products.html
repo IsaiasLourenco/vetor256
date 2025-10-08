@@ -3,10 +3,24 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Vetor256.</title>
+  <title>Produtos | Vetor256 - Aplicativos, Softwares e Sites</title>
+  <meta name="description"
+    content="Conheça os produtos da Vetor256: desenvolvimento de aplicativos, softwares personalizados e sites modernos para seu negócio.">
+  <meta name="keywords" content="aplicativos, softwares, sites, desenvolvimento, tecnologia, Vetor256">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="Free HTML Templates" name="keywords">
-  <meta content="Free HTML Templates" name="description">
+  <meta property="og:title" content="Produtos | Vetor256">
+  <meta property="og:description"
+    content="Aplicativos, softwares e sites desenvolvidos com inovação e tecnologia para seu negócio.">
+  <meta property="og:image" content="https://vetor256.com/img/logogg.png">
+  <meta property="og:url" content="https://vetor256.com/products.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Produtos | Vetor256">
+  <meta name="twitter:description"
+    content="Aplicativos, softwares e sites desenvolvidos com inovação e tecnologia para seu negócio.">
+  <meta name="twitter:image" content="https://vetor256.com/img/logogg.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./img/adm/oficiallogo.ico">
@@ -68,8 +82,7 @@
           <a href="quote.html" class="nav-item nav-link">Orçamento</a>
           <a href="contact.html" class="nav-item nav-link">Contato</a>
         </div>
-        <butaton type="button" class="btn text-primary ms-3" ><i
-            class="fa fa-achae"></i></butaton>
+        <button type="button" class="btn text-primary ms-3"><i class="fa fa-achae"></i></button>
         <a href="products.html" class="btn btn-primary py-2 px-4 me-3 slideInLeft active">Produtos</a>
       </div>
     </nav>
@@ -77,31 +90,27 @@
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="w-100" src="img/sobra-2.jpg" alt="Image" />
+          <img class="w-100" src="img/sobra-2.jpg" alt="Banner de produtos Vetor256" />
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div class="p-3" style="max-width: 900px">
-              <h5 class="text-white text-uppercase mb-3 animated slideInDown">
-                <h1 class="display-4 text-white animated zoomIn">
-                  Aplicativos <i class="bi bi-app"></i><br />
-                  Softwares <i class="bi bi-window-sidebar"></i><br />
-                  Sites <i class="bi bi-textarea-resize"></i>
-                </h1>
-              </h5>
+              <h1 class="display-4 text-white animated zoomIn mb-3">
+                Aplicativos <i class="bi bi-app"></i><br />
+                Softwares <i class="bi bi-window-sidebar"></i><br />
+                Sites <i class="bi bi-textarea-resize"></i>
+              </h1>
               <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamento</a>
               <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contato</a>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="w-100" src="img/blog-6.jpg" alt="Image" />
+          <img class="w-100" src="img/blog-6.jpg" alt="Banner de integração e mobilidade Vetor256" />
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div class="p-3" style="max-width: 900px">
-              <h1 class="display-4 text-white animated zoomIn">
-                <h1 class="display-4 text-white animated zoomIn">
-                  Mobilidade <i class="bi bi-app"></i><br />
-                  Integração <i class="bi bi-window-sidebar"></i><br />
-                  API's <i class="bi bi-textarea-resize"></i>
-                </h1>
+              <h1 class="display-4 text-white animated zoomIn mb-3">
+                Mobilidade <i class="bi bi-app"></i><br />
+                Integração <i class="bi bi-window-sidebar"></i><br />
+                API's <i class="bi bi-textarea-resize"></i>
               </h1>
               <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamento
                 Gratuito</a>
@@ -140,14 +149,14 @@
   </script>
   <!-- Fim do Chamando within_price -->
 
-  <!-- Chamando within_product -->
+  <!-- Chamando within_products -->
   <div id="within_products"></div>
   <script>
     fetch("within_products.html")
       .then(response => response.text())
       .then(data => document.getElementById("within_products").innerHTML = data);
   </script>
-  <!-- Fim do Chamando within_price -->
+  <!-- Fim do Chamando within_products -->
 
   <!-- Chamando within_portfolio -->
   <div id="within_portfolio"></div>
@@ -156,16 +165,7 @@
       .then(response => response.text())
       .then(data => document.getElementById("within_portfolio").innerHTML = data);
   </script>
-  <!-- Fim do Chamando within_price -->
-
-  <!-- Chamando within_price -->
-  <div id="within_price"></div>
-  <script>
-    fetch("within_price.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("within_price").innerHTML = data);
-  </script>
-  <!-- Fim do Chamando within_price -->
+  <!-- Fim do Chamando within_portfolio -->
 
   <!-- Chamando within_quote -->
   <div id="within_quote"></div>
@@ -184,6 +184,14 @@
       .then(data => document.getElementById("rodape").innerHTML = data);
   </script>
   <!-- Fim do Chamando rodape -->
+
+  <!-- Botão do WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=5519971110538&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Vetor256."
+    class="btn btn-success btn-lg rounded-circle position-fixed" style="bottom: 100px; right: 45px; z-index: 100;"
+    target="_blank" aria-label="Fale sobre produtos pelo WhatsApp"
+    onclick="gtag('event', 'whatsapp_click', { 'event_category': 'Produtos', 'event_label': 'Botão WhatsApp' });">
+    <i class="fab fa-whatsapp" style="font-size: 28px;"></i>
+  </a>
 
   <!-- Back to Top -->
   <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
