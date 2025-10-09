@@ -52,17 +52,24 @@
               <h3 class="text-light mb-0">Contato</h3>
             </div>
             <div class="d-flex mb-2">
-              <i class="bi bi-geo-alt text-primary me-2"></i>
-              <p class="mb-0">Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP - Brasil</p>
+              <a href="https://maps.app.goo.gl/SFVz2LzEnj6S7cWz7" target="_blank" aria-label="Mapa"
+                class="me-3 text-light texto-menor">
+                <i class="bi bi-geo-alt text-primary me-2"></i>
+                Rua Mococa, 880 Jd. Itacolomy - Mogi Guaçu - SP - Brasil
+              </a>
             </div>
             <div class="d-flex mb-2">
-              <i class="bi bi-envelope-open text-primary me-2"></i>
-              <p class="mb-0">contato@vetor256.com</p>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalContato" class="text-light">
+                <i class="bi bi-envelope-open text-primary me-2"></i>
+                contato@vetor256.com
+              </a>
             </div>
 
             <div class="d-flex mb-2">
-              <i class="bi bi-telephone text-primary me-2"></i>
-              <p class="mb-0">+55 (19) 97111 0538</p>
+              <a href="tel:+551938916797" aria-label="Ligar" class="me-3 text-light">
+                <i class="bi bi-telephone text-primary me-2"></i>
+                +55 (19) 97111 0538
+              </a>
             </div>
             <div class="d-flex mt-4">
               <a class="btn btn-primary btn-square me-2" href="https://www.youtube.com/channel/UCucCsiVk4zycu4CwVxY5WTw"
@@ -139,35 +146,41 @@
 </div>
 <!-- Footer End -->
 
-<!-- AJAX PARA ENVIAR EMAIL -->
-<!-- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let form = document.getElementById("footerEmailForm");
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault(); // 🔥 Bloqueia o envio tradicional
-
-      let formData = new FormData(form);
-
-      fetch("send_email.php", {
-        method: "POST",
-        body: formData
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error("Erro na requisição ao servidor.");
-          }
-          return response.json(); // Espera um JSON com a resposta
-        })
-        .then(data => {
-          window.alert(data.message); // 🚀 Exibe o alerta corretamente sem abrir nova aba
-          form.reset(); // 🔥 Limpa o formulário corretamente
-        })
-        .catch(error => {
-          window.alert("Erro ao enviar o email. Tente novamente.");
-        });
-    });
-  });
-</script> -->
-
-<!-- FIM AJAX PARA ENVIAR EMAIL -->
+<!-- Modal -->
+<div class="modal fade" id="modalContato" tabindex="-1" aria-labelledby="modalContatoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <form method="POST" action="send_email.php" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalContatoLabel">Peça seu orçamento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-xl-12">
+            <input type="text" class="form-control bg-light border-0" name="nome_msg" placeholder="Seu nome"
+              style="height: 55px" required />
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control bg-light border-0" name="email_msg" placeholder="Seu Email"
+              style="height: 55px" required />
+          </div>
+          <div class="col-12">
+            <select name="plano_msg" class="form-select bg-light border-0" style="height: 55px" required>
+              <option value="" selected>Selecione um Plano</option>
+              <option value="Plano Básico">Plano Básico</option>
+              <option value="Plano Standard">Plano Standard</option>
+              <option value="Plano Advanced">Plano Advanced</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control bg-light border-0" rows="3" name="mensagem_msg" placeholder="Mensagem"
+              required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-dark w-100 py-3" type="submit">Enviar mensagem</button>
+      </div>
+    </form>
+  </div>
+</div>
